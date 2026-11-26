@@ -1,0 +1,12 @@
+PASS all-time left lead; kappa 7 slow width .124
+rho 0.99401173333333 enclosure radius < 3.89e-61
+lower 0.99704758172324 enclosure radius < 3.72e-34
+R 0.99817708249778 enclosure radius < 2.97e-34
+upper 1.3876235099674 enclosure radius < 4.93e-34
+rho*p 1.1787135034438 enclosure radius < 1.96e-34
+PASS all-time left lead; kappa 7 slow width .12
+rho 0.96912533333333 enclosure radius < 3.89e-61
+lower 0.98417814870759 enclosure radius < 3.74e-34
+R 1.0042834582578 enclosure radius < 2.97e-34
+upper 1.4284883961621 enclosure radius < 5.09e-34
+rho*p 1.1467946497786 enclosure radius < 1.9e-34

@@ -1,0 +1,6 @@
+rho 0.969985951219512 +/- at most 3.89e-61
+spectral ratio 0.97038135089682 +/- at most 2.99e-34
+old lower bound 0.98524005545516 +/- at most 3.75e-34
+minimizer x 0.748932765510844 +/- at most 4.57e-34
+minimum 0.00730190899057668 +/- at most 6.36e-34
+PASS no negative valley for any t > 0, despite failing prior test
