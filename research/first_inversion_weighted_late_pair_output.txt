@@ -1,0 +1,3 @@
+PASS existence and full rank 0.000827331351572708526794142 3.9683225290154754011362 4.57138565559592260227528 7.41470564169887573384919
+PASS first half-spectrum tie, higher modes strict, left static lead
+PASS c3=0 and c4 strictly negative -0.00242146362217563883

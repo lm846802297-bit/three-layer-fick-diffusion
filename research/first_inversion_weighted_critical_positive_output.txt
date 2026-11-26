@@ -1,0 +1,9 @@
+PASS existence and full rank 0.000827331351572708526794142 3.9683225290154754011362 4.57138565559592260227528 7.41470564169887573384919
+PASS first half-spectrum tie, higher modes strict, left static lead
+PASS c3=0 and c4 strictly negative -0.00242146362217563883
+PASS e^(lambda4-lambda2)t W is positive for t>=.1
+PASS complete slab .002 .003 pieces 9
+PASS complete slab .003 .005 pieces 6
+PASS complete slab .005 .010 pieces 4
+PASS complete slab .010 .10 pieces 4
+PASS strict margin for two-mode-deflated derivative on t>=.1, ratio 0.003809224623696
