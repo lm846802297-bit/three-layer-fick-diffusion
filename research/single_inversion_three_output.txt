@@ -1,0 +1,14 @@
+PASS only half-spectrum inversion: n=2; n>=30 from optical bound
+PASS 0<t<=.0008: right/left < .56
+PASS 160 ordered full-interval modes
+PASS .000799 .028 value 1 cells 100
+PASS .028 .031 derivative -1 cells 1
+PASS .031 .11 value -1 cells 4
+PASS .11 .123 derivative 1 cells 1
+PASS .123 1.03 value 1 cells 8
+PASS 1.03 1.13 derivative -1 cells 1
+PASS 1.13 1.4 value -1 cells 1
+PASS root bracket .02936168 .02936170
+PASS root bracket .11633274 .11633276
+PASS root bracket 1.07769250 1.07769253
+PASS t>=1.4 negative. Steady difference [-0.000000420066038879844374374040762288165957611588018769468776751663183843728257, -0.000000420066038879844374374040762288165957611588018769468776751663124560375852]
