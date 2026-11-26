@@ -13,6 +13,7 @@
 - [带权导数两个任意晚零点](FIRST_INVERSION_WEIGHTED_LATE_PAIR.md)；[双消失点的区间正性](FIRST_INVERSION_WEIGHTED_CRITICAL_POSITIVE.md)
 - [全正核路线与谱符号法的局限](FIRST_INVERSION_VARIATION_DIMINISHING.md)
 - [物理输入 J 的任意晚双零点](FIRST_INVERSION_PHYSICAL_INPUT_LATE_PAIR.md)：辅助函数变号不等于实际反超。
+- [晚时 J 零点对不能叠加早期过零](FIRST_INVERSION_PHYSICAL_INPUT_NO_STACKING.md)：规则、非均匀临界极限的解析结果。
 
 附录脚本和原始运行输出在本目录。部分脚本为浮点筛查，不能作为全域证明。后续归档完整性可用 SHA-256 校验：
     
