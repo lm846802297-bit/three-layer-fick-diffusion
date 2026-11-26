@@ -1,0 +1,1 @@
+Candidate roots 429 with c2>1e-7 classified by (reverse order, early sign changes): {(False, 1): 154}
