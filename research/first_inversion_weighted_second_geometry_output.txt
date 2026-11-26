@@ -1,0 +1,9 @@
+PASS only the first half-spectrum mode is inverted, uniformly in kappa bracket
+PASS uniform 0<t<=.0018 positive
+PASS initial positive cumulative difference and slope
+PASS weighted slab .0018 .01635 derivative 0 sign 1 pieces 7
+PASS weighted slab .01635 .01665 derivative 1 sign -1 pieces 1
+PASS weighted slab .01665 .06990 derivative 0 sign -1 pieces 6
+PASS weighted slab .06990 .07045 derivative 1 sign 1 pieces 1
+PASS weighted slab .07045 .1 derivative 0 sign 1 pieces 1
+PASS exactly two weighted zeros for t>=.0018, with none after .1
