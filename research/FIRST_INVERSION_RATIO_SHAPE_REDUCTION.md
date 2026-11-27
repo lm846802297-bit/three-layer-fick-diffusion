@@ -43,13 +43,11 @@ L_i\ge R_i\ge\lambda_{i+1},\qquad i\ge2.
 由捕获概率的精确 Laplace 变换及 \(G_L(0)=G_R(0)=0\)，得到
 \[
 \widehat{G_L'}(s)
-=\frac1{\lambda_1}
-\prod_{i\ge1}\frac{1+s/R_i}{1+s/\lambda_{i+1}},
+=\prod_{i\ge1}\frac{1+s/R_i}{1+s/\lambda_{i+1}},
 \]
 \[
 \widehat{G_R'}(s)
-=\frac1{\lambda_1}
-\prod_{i\ge1}\frac{1+s/L_i}{1+s/\lambda_{i+1}}.
+=\prod_{i\ge1}\frac{1+s/L_i}{1+s/\lambda_{i+1}}.
 \]
 
 定义正常高阶半谱核
@@ -98,29 +96,29 @@ k(t)=(e^{-c\,\cdot}*f_X)(t)
 利用 \(k'=f_X-ck\)，以及卷积与微分可交换，得到
 \[
 \boxed{
-G_L'(t)=\frac{c}{\lambda_1b}\,[k'(t)+bk(t)] ,
+G_L'(t)=\frac cb\,[k'(t)+bk(t)] ,
 }
 \]
 \[
 \boxed{
-G_R'(t)=\frac{c}{\lambda_1a}\,
+G_R'(t)=\frac ca\,
 \big[(\nu*k)'(t)+a(\nu*k)(t)\big]
-=\frac{c}{\lambda_1a}\,[\nu*(k'+ak)](t).
+=\frac ca\,[\nu*(k'+ak)](t).
 }
 \]
 
 特别地，
 \[
-G_L'(t)=\frac{c}{\lambda_1b}
+G_L'(t)=\frac cb
 \left[f_X(t)+(b-c)k(t)\right]>0.
 \]
 积分并使用 \(k(0)=0\) 还得到
 \[
-G_L(t)=\frac{c}{\lambda_1b}
+G_L(t)=\frac cb
 \left[k(t)+b\int_0^t k(u)\,du\right]>0,
 \]
 \[
-G_R(t)=\frac{c}{\lambda_1a}
+G_R(t)=\frac ca
 \left[(\nu*k)(t)+a\int_0^t(\nu*k)(u)\,du\right]>0.
 \]
 因此 \(Q(t)>0\)，且 \(G_L\) 可作为严格正的权重函数。
