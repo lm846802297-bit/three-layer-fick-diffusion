@@ -1,0 +1,5 @@
+kappa star 7.54704073659625
+eps .1 d_fold 9.9132947e-5 time 0.323866515 d_fold/d_leading 1.00000608071 time correction -1.89355e-6
+eps .01 d_fold 2.41026461e-6 time 0.483335798 d_fold/d_leading 1.00000001644 time correction -5.0638e-9
+eps .001 d_fold 5.97137697e-8 time 0.644989261 d_fold/d_leading 1.00000000004 time correction -1.22083e-11
+eps .0001 d_fold 1.48958149e-9 time 0.806754925 d_fold/d_leading 1.0 time correction -2.92325e-14
