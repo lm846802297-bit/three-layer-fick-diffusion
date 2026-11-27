@@ -305,6 +305,55 @@ r(t)\le0\quad(t\ge t_*).
 \]
 这是 \(X_c\le_{\rm rh}T_c\) 的反向风险率序。它是后续曲率估计可直接使用的额外约束。
 
+### 6.1 条件分布下的精确矩恒等式
+
+定义
+\[
+\pi_t(dz)=\frac{F_X(t-z)\,\mathbf 1_{[0,t]}(z)\,\nu_c(dz)}{F_T(t)},
+\]
+其中 \(\nu_c=P_{Z_c}\)。这正是 \(Z_c\) 在条件 \(X_c+Z_c\le t\) 下的条件分布。令
+\[
+q_t(z)=h_X(t-z).
+\]
+由 \(F_T(t)=\int F_X(t-z)\nu_c(dz)\) 得
+\[
+h_T(t)=\mathbb E_{\pi_t}[q_t].
+\]
+对参数 \(t\) 求导时，权重的对数导数为 \(q_t-h_T\)。因此
+\[
+\boxed{
+h_T'=\mathbb E_{\pi_t}[h_X'(t-Z)]
++\operatorname{Var}_{\pi_t}(h_X(t-Z)).
+}
+\]
+这与 \(F_T\) 的对数凹性 \(h_T'\le0\) 一起给出严格可用的方差约束
+\[
+\boxed{
+\operatorname{Var}_{\pi_t}(h_X(t-Z))
+\le-\mathbb E_{\pi_t}[h_X'(t-Z)].
+}
+\]
+再求一次导数，得到
+\[
+\boxed{
+h_T''=
+\mathbb E_{\pi_t}[h_X''(t-Z)]
++3\operatorname{Cov}_{\pi_t}
+ \!\left(h_X(t-Z),h_X'(t-Z)\right)
++\kappa_{3,\pi_t}\!\left(h_X(t-Z)\right),
+}
+\]
+其中 \(\kappa_{3,\pi_t}\) 是三阶中心矩。这些恒等式在正光学距离下成立；\(F_X(0+)=f_X^c(0+)=0\)，故移动积分端点不产生边界项。
+
+特别地，
+\[
+h_T'-h_X'
+=
+\mathbb E_{\pi_t}[h_X'(t-Z)-h_X'(t)]
++\operatorname{Var}_{\pi_t}(h_X(t-Z)).
+\]
+所以，虽然已经证明 \(h_T\ge h_X\)，要进一步证明 \(F_T/F_X\) 对数凹，仍须控制上式中“平均曲率差”与条件方差之间的竞争。单凭 CDF 对数凹给出的方差上界还不足以确定这个差的符号。
+
 ## 6. 真正剩下的 Robin 专属曲率不等式
 
 现在正值区间已确定为 \((0,t_*)\)。在该区间，
