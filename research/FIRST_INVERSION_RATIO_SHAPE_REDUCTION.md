@@ -198,7 +198,7 @@ r(t)=\frac ba\,\frac{H(t)}{k(t)}
 
 - Bondesson, *Classes of Infinitely Divisible Distributions and Densities* (1981), [DOI:10.1007/BF00533713](https://doi.org/10.1007/BF00533713)：给出指数混合卷积类及其与首次通过时间分布的联系；GGC 子类具有单峰性，但这并不直接推出当前两个响应的比值对数凹。
 - Keilson, *On the Unimodality of Passage Time Densities in Birth-Death Processes* (1981), [DOI:10.1111/j.1467-9574.1981.tb00710.x](https://doi.org/10.1111/j.1467-9574.1981.tb00710.x)：首次通过时间密度的单峰性及其卷积分解提供可借鉴结构，但没有给出本模型所需的导数比值定理。
-- Di Crescenzo and Ricciardi, *Comparing Failure Times via Diffusion Models and Likelihood Ratio Ordering* (1996)：对 Wiener 与 Ornstein–Uhlenbeck 首次通过时间给出似然比序条件；其模型不是分层扩散的双 Robin 边界问题，不能直接套用。
+- Di Crescenzo and Ricciardi, *Comparing First-Passage Times for Semi-Markov Skip-Free Processes* (1996), [DOI:10.1016/0167-7152(95)00227-8](https://doi.org/10.1016/0167-7152(95)00227-8)：比较半马尔可夫 skip-free 过程的首次通过时间；并未给出分层 Robin 扩散的导数比值对数凹性。
 
 ## 7. 当前结论
 
