@@ -164,47 +164,197 @@ r(t)=\frac ba\frac{\nu*(k'+ak)}{k'+bk}
 \]
 在其正值区间上严格对数凹，并且正值区间只有一个连通分支。
 
-## 5. 尚缺的 Robin 专属不等式
+## 5. 指数倾斜后的 CDF 表示：正值区间已经封闭
 
 令
 \[
-H(t)=(\nu*k)(t),\qquad
-u(t)=(\log H(t))',\qquad
-v(t)=(\log k(t))'.
+M_X=K(-c),\qquad M_Z=\widehat\nu(-c),
 \]
-在 \(r(t)>0\) 的区间内，
+并定义指数倾斜概率测度
 \[
-r(t)=\frac ba\,\frac{H(t)}{k(t)}
-\frac{u(t)+a}{v(t)+b},
+dP_{X_c}(x)=\frac{e^{cx}}{M_X}\,dP_X(x),\qquad
+dP_{Z_c}(z)=\frac{e^{cz}}{M_Z}\,d\nu(z).
 \]
-并且 \(v(t)+b>0\)，因为 \(k\) 的严格对数凹性给出 \(v'(t)<0\)，而 \(v(t)\to-c\) 且 \(b>c\)。
+取 \(X_c,Z_c\) 独立，记 \(T_c=X_c+Z_c\)，其 CDF 分别为 \(F_X,F_T\)，密度为 \(f_X^c,f_T^c\)。为避免与未倾斜密度混淆，以下写
+\[
+h_X=\frac{f_X^c}{F_X},\qquad h_T=\frac{f_T^c}{F_T}.
+\]
+它们是反向风险率（reversed hazard rates）。
 
-对数曲率的精确表达式为
+由指数倾斜的定义，
 \[
 \boxed{
-(\log r)''
-=u'-v'
-+\frac{u''}{u+a}
--\frac{(u')^2}{(u+a)^2}
--\frac{v''}{v+b}
-+\frac{(v')^2}{(v+b)^2}.
+k(t)=M_Xe^{-ct}F_X(t),\qquad
+(\nu*k)(t)=M_XM_Ze^{-ct}F_T(t).
 }
 \]
-现有结果只给出 \(k\) 的严格对数凹性，即 \(v'<0\)。它并不自动给出 \(H=\nu*k\) 的对数凹性，也不能仅凭 \(\nu\) 是正测度就断言 \(H/k\) 对数凹。任意正测度卷积并不普遍保持对数凹性。
+因此
+\[
+k'+ak=M_Xe^{-ct}F_X(t)\,[h_X(t)-(c-a)],
+\]
+\[
+(\nu*k)'+a(\nu*k)
+=M_XM_Ze^{-ct}F_T(t)\,[h_T(t)-(c-a)],
+\]
+而
+\[
+k'+bk=M_Xe^{-ct}F_X(t)\,[h_X(t)+(b-c)]>0.
+\]
 
-因此，不能把“\(k\) 对数凹”直接替换成“\(r\) 单峰”。需要利用 \(\nu\) 的特殊 Robin 谱结构，证明上式严格小于零，并证明 \(u+a\) 只变号一次。一般正常半谱排序不足以自动提供这两个结论；已有静态打平风险率反例也说明，不能仅凭 \(L_i\ge R_i\) 断言任意相关风险率只过阈值一次。
+### 5.1 倾斜后的阶段分布
 
-## 6. 文献位置与适用边界
+对每个 \(i\ge2\)，\(X_c\) 的第 \(i\) 个独立阶段仍是零膨胀指数分布：
+\[
+\begin{array}{c|c|c}
+&\text{零原子概率}&\text{非零时的指数速率}\\ \hline
+X_c&
+\dfrac{\lambda_{i+1}-c}{R_i-c}&
+\lambda_{i+1}-c\\[6pt]
+Z_c&
+\dfrac{R_i-c}{L_i-c}&
+R_i-c
+\end{array}
+\]
+对应的非零概率分别为
+\[
+\frac{R_i-\lambda_{i+1}}{R_i-c},
+\qquad
+\frac{L_i-R_i}{L_i-c}.
+\]
+所有速率严格为正，因为
+\[
+c=\lambda_2<\lambda_3\le R_i\le L_i.
+\]
+
+任一零膨胀指数变量都可写成
+\[
+Y_i=(E_i-\tau_i)_+,\qquad E_i\sim\operatorname{Exp}(r_i),
+\]
+其中 \(\tau_i=-r_i^{-1}\log q_i\)，\(q_i\) 是该阶段的非零概率。有限阶段和的 CDF 是
+\[
+P\!\left(\sum_i(E_i-\tau_i)_+\le t\right).
+\]
+由于 \(\sum_i(E_i-\tau_i)_+\) 关于 \(E_i\) 是凸函数，其次水平集在 \((E,t)\) 空间中为凸集；指数联合密度是对数凹函数。由 Prékopa 定理，有限阶段和的 CDF 对数凹。又由 Weyl 渐近，两个无限阶段和的期望均收敛，有限部分和单调趋于 \(X_c,T_c\)，故取极限仍有
+\[
+\boxed{
+F_X(t)\ \text{和}\ F_T(t)\ \text{均对数凹}.
+}
+\]
+
+严格光学长度为正保证 \(X_c\) 没有零原子：其各阶段零原子概率趋于
+\[
+\left(\frac{\ell_R}{\ell_L+\ell_R}\right)^2<1,
+\]
+故无限乘积为零。于是 \(F_X(0)=F_T(0)=0\)，而 \(F_X,F_T>0\) 对所有 \(t>0\) 成立。热核/谱乘积的高频衰减给出正时间上的连续密度。因而
+\[
+h_X'(t)\le0,\qquad h_T'(t)\le0.
+\]
+此外
+\[
+h_T(0+)=+\infty,\qquad h_T(\infty)=0.
+\]
+第一式由 \(\log F_T(t)\to-\infty\) 和其凹性推出；第二式由 \(F_T(t)\to1\) 及 \(h_T\) 非增推出。
+
+### 5.2 \(r\) 的正值集合是一个初始区间
+
+令
+\[
+\alpha=c-a>0,\qquad \beta=b-c>0.
+\]
+代入第 3 节的精确卷积恒等式，得到
+\[
+\boxed{
+r(t)=\frac ba\,M_Z\,
+\frac{F_T(t)}{F_X(t)}
+\frac{h_T(t)-\alpha}{h_X(t)+\beta}.
+}
+\]
+分母严格为正，所以
+\[
+r(t)>0\quad\Longleftrightarrow\quad h_T(t)>\alpha.
+\]
+由于 \(h_T\) 连续、非增，且从 \(+\infty\) 降至 0，存在有限 \(t_*>0\)，使得
+\[
+\boxed{
+r(t)>0\quad(0<t<t_*),\qquad
+r(t)\le0\quad(t\ge t_*).
+}
+\]
+若 \(h_T\) 在阈值处没有平台，则 \(t_*\) 是唯一解 \(h_T(t_*)=\alpha\)；即使存在平台，正值集合仍然只有一个连通分支。
+
+因此，上一轮单峰传递引理的“正值区间从零开始且只有一个连通分支”这一前提已经证明，不再是开放条件。
+
+### 5.3 一个额外的反向风险率排序
+
+由
+\[
+\frac{(\nu*k)(t)}{k(t)}
+=\int_{[0,t]}\frac{k(t-z)}{k(t)}\,\nu(dz)
+\]
+及 \(k\) 的对数凹性，对每个固定 \(z\ge0\)，
+\[
+\frac{d}{dt}\log\frac{k(t-z)}{k(t)}
+=(\log k)'(t-z)-(\log k)'(t)\ge0.
+\]
+积分域也随 \(t\) 增大，故 \((\nu*k)/k\) 非减。结合倾斜表示，
+\[
+\boxed{
+\frac{F_T(t)}{F_X(t)}\ \text{非减},
+\qquad h_T(t)\ge h_X(t).
+}
+\]
+这是 \(X_c\le_{\rm rh}T_c\) 的反向风险率序。它是后续曲率估计可直接使用的额外约束。
+
+## 6. 真正剩下的 Robin 专属曲率不等式
+
+现在正值区间已确定为 \((0,t_*)\)。在该区间，
+\[
+r(t)=C\frac{F_T(t)}{F_X(t)}
+\frac{h_T(t)-\alpha}{h_X(t)+\beta},
+\qquad C=\frac baM_Z>0.
+\]
+因此对数曲率可写成更直接的形式：
+\[
+\boxed{
+\begin{aligned}
+(\log r)''
+={}&h_T'-h_X'
++\frac{h_T''}{h_T-\alpha}
+-\frac{(h_T')^2}{(h_T-\alpha)^2}\\
+&-\frac{h_X''}{h_X+\beta}
++\frac{(h_X')^2}{(h_X+\beta)^2}.
+\end{aligned}
+}
+\]
+需要证明该式在 \(0<t<t_*\) 严格小于零，或找到足以推出 \(r\) 单峰的较弱不等式。
+
+目前已知：
+\[
+h_T'\le0,\qquad h_X'\le0,\qquad h_T\ge h_X.
+\]
+但这些一阶关系还不能决定 \(h_T'-h_X'\) 或两个二阶曲率组合的总符号。特别是，不能从 CDF 对数凹直接推出 \(h_X''\ge0\)，也不能把任意正卷积误认为保留对数凹性。
+
+所以，当前缺口已经从两个条件缩小为一个明确命题：
+\[
+\boxed{
+\mathcal C(t):=(\log r(t))''<0,
+\qquad 0<t<t_*.
+}
+\]
+若该不等式成立，则 \(r\) 在唯一正值区间严格对数凹；结合第 4 节的传递引理，立即得到 \(Q\) 至多单峰，进而 \(J\) 至多有两个正时间零点。
+
+## 7. 文献位置与适用边界
 
 - Bondesson, *Classes of Infinitely Divisible Distributions and Densities* (1981), [DOI:10.1007/BF00533713](https://doi.org/10.1007/BF00533713)：给出指数混合卷积类及其与首次通过时间分布的联系；GGC 子类具有单峰性，但这并不直接推出当前两个响应的比值对数凹。
 - Keilson, *On the Unimodality of Passage Time Densities in Birth-Death Processes* (1981), [DOI:10.1111/j.1467-9574.1981.tb00710.x](https://doi.org/10.1111/j.1467-9574.1981.tb00710.x)：首次通过时间密度的单峰性及其卷积分解提供可借鉴结构，但没有给出本模型所需的导数比值定理。
 - Di Crescenzo and Ricciardi, *Comparing First-Passage Times for Semi-Markov Skip-Free Processes* (1996), [DOI:10.1016/0167-7152(95)00227-8](https://doi.org/10.1016/0167-7152(95)00227-8)：比较半马尔可夫 skip-free 过程的首次通过时间；并未给出分层 Robin 扩散的导数比值对数凹性。
 
-## 7. 当前结论
+## 8. 当前结论
 
 1. 两个导数响应的精确半谱卷积恒等式已经得到。
 2. \(G_L'>0\)、\(G_L>0\)、\(G_R>0\) 已由正等待表示直接证明。
-3. “\(r\) 单峰 \(\Rightarrow Q\) 单峰 \(\Rightarrow J\) 至多两个零点”的传递环节已经严格证明。
-4. 尚未证明的是 Robin 特定的 \(r\) 正值区间单连通性和严格对数凹性。
+3. \(r\) 的正值集合是唯一的初始区间，且 \(h_T\ge h_X\) 已由对数凹核推出。
+4. “\(r\) 单峰 \(\Rightarrow Q\) 单峰 \(\Rightarrow J\) 至多两个零点”的传递环节已经严格证明。
+5. 尚未证明的是 Robin 特定的 \(\mathcal C(t)<0\)，或其他足以保证 \(r\) 单峰的曲率比较。
 
-本文件不把尚未证明的比值单峰性写成定理，也不改变已有的静态打平局部结论。下一步只研究第 5 节的对数曲率不等式，不再重复已有的全时间局部证书。
+本文件不把尚未证明的比值单峰性写成定理，也不改变已有的静态打平局部结论。下一步只研究第 6 节的 Robin 专属曲率不等式，不再重复已有的全时间局部证书。
