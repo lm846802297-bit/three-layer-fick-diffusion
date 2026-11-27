@@ -521,6 +521,7 @@ h_T'\le0,\qquad h_X'\le0,\qquad h_T\ge h_X.
 - Keilson, *On the Unimodality of Passage Time Densities in Birth-Death Processes* (1981), [DOI:10.1111/j.1467-9574.1981.tb00710.x](https://doi.org/10.1111/j.1467-9574.1981.tb00710.x)：首次通过时间密度的单峰性及其卷积分解提供可借鉴结构，但没有给出本模型所需的导数比值定理。
 - Di Crescenzo and Ricciardi, *Comparing First-Passage Times for Semi-Markov Skip-Free Processes* (1996), [DOI:10.1016/0167-7152(95)00227-8](https://doi.org/10.1016/0167-7152(95)00227-8)：比较半马尔可夫 skip-free 过程的首次通过时间；并未给出分层 Robin 扩散的导数比值对数凹性。
 - Sangüesa, Badía and Cha, *Preservation of ageing classes in deterioration models with independent increments* (2014), [DOI:10.1186/1029-242x-2014-200](https://doi.org/10.1186/1029-242x-2014-200)：研究独立正增量过程下 CDF 对数凹（DRHR）等性质的保持；本文对倾斜阶段和的 CDF 直接使用 Prékopa 定理，不依赖其过程假设。
+- Xu and Balakrishnan, *On the Convolution of Heterogeneous Bernoulli Random Variables* (2011), [DOI:10.1017/S0021900200008391](https://doi.org/10.1017/S0021900200008391)：研究异质 Bernoulli 和的似然比序与反向风险率序。这里的倾斜谱变量是带指数权重的 Bernoulli 和，故该文提供离散激活变量比较的相关方法；其结论并不直接覆盖连续加权和或本节所需的混合三阶导数符号。
 - Yu, *Stochastic Ordering of Exponential Family Distributions and Their Mixtures* (2009), [DOI:10.1239/jap/1238592127](https://doi.org/10.1239/jap/1238592127)：以相对对数凹序比较指数族及其混合，并处理 Gamma 卷积；可作为后续比较 (F_T/F_X) 的工具背景，但没有直接给出当前 Robin 谱乘积所需的曲率不等式。
 
 ## 8. 当前结论
