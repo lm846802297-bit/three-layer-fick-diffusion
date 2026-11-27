@@ -15,6 +15,7 @@
 - [物理输入 J 的任意晚双零点](FIRST_INVERSION_PHYSICAL_INPUT_LATE_PAIR.md)：辅助函数变号不等于实际反超。
 - [晚时 J 零点对不能叠加早期过零](FIRST_INVERSION_PHYSICAL_INPUT_NO_STACKING.md)：规则、非均匀临界极限的解析结果。
 - [单个晚时 J 零点与静态打平面](FIRST_INVERSION_SINGLE_LATE_ZERO.md)：严格逆序时的唯一晚时上穿率，以及双消失邻域真实捕获差的全时间正性。
+- [静态打平面的实 Laplace 变换](FIRST_INVERSION_STATIC_TIE_LAPLACE.md)：变换恰有一个简单零点；显式反例说明这一性质不能反推出时间域零点上限。
 
 附录脚本和原始运行输出在本目录。部分脚本为浮点筛查，不能作为全域证明。后续归档完整性可用 SHA-256 校验：
     
