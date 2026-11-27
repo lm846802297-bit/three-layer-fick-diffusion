@@ -320,10 +320,10 @@ V_{t_\kappa}''(z_0)<0.
 - 区间运算：Python 3.13.5，mpmath 1.3.0，60 位十进制区间精度。
 - 独立复核：70 位 mpmath 高精度根求解。
 - 环境：Linux 6.18.57 x86_64，AMD EPYC 9V74；未使用 GPU。
-- 输入 SHA-256：1e513a24125aa906d51b8087dbc030763aeb496939db3a3961af53e53d4fcbe2
-- 区间源码 SHA-256：7c832226e689691e0039d35d7ba1169b4464c75cbbbf6eacf30406571f88e816
+- 输入 SHA-256：239158a951724317fb50b60d82822cfdc9a1db0a67bc9cf2f843b987948f2db3
+- 区间源码 SHA-256：d69023ef35d14cdaa82aeb4d12fa87ea24f9661ea076855e0afd5eb57f3a80a4
 - 区间输出 SHA-256：74d333499d47736ac00a8ad2c5f63d223217fd8240981edf3278a57d6141868b
-- 独立源码 SHA-256：5bda669a3d0ceb19d3aff3c47f109db4a30f7519907a62629160b3d8b6047389
+- 独立源码 SHA-256：9ad47aef8ff2d6dd1581db8c22e7903ecaa3e9901a9dd532966a1a877b797b09
 - 独立输出 SHA-256：e81b65385ef37bd58e144ddb9abfe99cee1aea1f955580a414dfbd1089c70d6f
 
 区间证书的根括区端点严格异号，交叉导数和 \(d\kappa/dk\) 的区间均严格为正；独立高精度求根与区间结果一致。高阶谱排序由上述 Prüfer 相位界与有限根区间共同控制。
