@@ -28,10 +28,10 @@
 - [半谱与全谱接合：连续参数区的两次上限](FIRST_INVERSION_POSITIVE_SPECTRAL_BRIDGE.md)：在固定几何的 κ∈[1.5,5.35] 排除第二负谷，并给其它几何的可检验判据。
 - [Z_c 密度的对数曲率与谱留数障碍](ZC_DENSITY_CURVATURE.md)：证明特定谱交错下晚时密度严格对数凸，确定条件势曲率补偿目标。
 - [条件势点态凸性条件的谱参数障碍](CURVATURE_COMPENSATION_OBSTRUCTION.md)：构造首模逆序 Robin 参数族，证明全域点态曲率补偿条件失效；不否定最终反超次数上限。
-- [条件势点态凸性条件的谱参数障碍](CURVATURE_COMPENSATION_OBSTRUCTION.md)：构造首模逆序 Robin 参数族，证明全域点态曲率补偿条件失效；不否定最终反超次数上限。
 - [首模逆序导数比值的精确卷积归约](FIRST_INVERSION_RATIO_SHAPE_REDUCTION.md)：将 (G_R'/G_L') 化为正延迟卷积与公共对数凹核的组合；单峰传递引理已证，Robin 比值对数凹性仍待证明。
 
-- [条件方差的加权控制与首次通过时间文献边界](WEIGHTED_CONDITIONAL_VARIANCE_AND_FIRST_PASSAGE_LITERATURE.md)：区分 Keilson/Assaf 的单一首次通过密度结论，建立 Stein-kernel 条件方差判据，并得到近打平晚时的谱渐近方差裕量。
+- [条件方差的加權控制与首次通过时间文献边界](WEIGHTED_CONDITIONAL_VARIANCE_AND_FIRST_PASSAGE_LITERATURE.md)：区分 Keilson/Assaf 的单一首次通过密度结论，建立 Stein-kernel 条件方差判据，并得到近打平晚时的谱渐近方差裕量。
+- [中间时间区域的加权 Poincaré 谱算子](MIDDLE_TIME_WEIGHTED_POINCARE_OPERATOR.md)：将条件方差归约为加权 Sturm–Liouville 谱隙，给出 Muckenhoupt 与 Chen–Wang Schur 上界，以及 q-适配 Stein 权重。
 
 附录脚本和原始运行输出在本目录。部分脚本为浮点筛查，不能作为全域证明。后续归档完整性可用 SHA-256 校验：
     
