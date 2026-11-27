@@ -354,6 +354,129 @@ h_T'-h_X'
 \]
 所以，虽然已经证明 \(h_T\ge h_X\)，要进一步证明 \(F_T/F_X\) 对数凹，仍须控制上式中“平均曲率差”与条件方差之间的竞争。单凭 CDF 对数凹给出的方差上界还不足以确定这个差的符号。
 
+### 5.4 两个倾斜分布的同速率 Bernoulli--指数表示
+
+记
+\[
+\alpha_i=\lambda_{i+1}-c,\qquad
+\rho_i=R_i-c,\qquad
+\sigma_i=L_i-c.
+\]
+在首模唯一逆序及高阶排序条件下，
+\[
+0<\alpha_i\le \rho_i\le \sigma_i.
+\]
+第 5.1 节的倾斜阶段变换可以改写为
+\[
+\begin{aligned}
+\mathbb E e^{-sX_{c,i}}
+&=\frac{1+s/\rho_i}{1+s/\alpha_i}
+ =\frac{\alpha_i}{\rho_i}
+  +\left(1-\frac{\alpha_i}{\rho_i}\right)
+    \frac{\alpha_i}{s+\alpha_i},\\
+\mathbb E e^{-sZ_{c,i}}
+&=\frac{1+s/\sigma_i}{1+s/\rho_i}
+ =\frac{\rho_i}{\sigma_i}
+  +\left(1-\frac{\rho_i}{\sigma_i}\right)
+    \frac{\rho_i}{s+\rho_i}.
+\end{aligned}
+\]
+因此可以在同一概率空间上取独立 \(E_i\sim\operatorname{Exp}(\alpha_i)\)，以及 Bernoulli 指示量 \(B_i^X,B_i^T\)，使
+\[
+X_c\overset d=\sum_i B_i^X E_i,\qquad
+T_c\overset d=\sum_i B_i^T E_i,
+\]
+其中
+\[
+P(B_i^X=1)=p_i^X=1-\frac{\alpha_i}{\rho_i},\qquad
+P(B_i^T=1)=p_i^T=1-\frac{\alpha_i}{\sigma_i}.
+\]
+由于 \(p_i^T\ge p_i^X\)，可用共同均匀随机数耦合成
+\[
+B_i^X\le B_i^T\quad\text{逐项成立},
+\]
+从而 \(X_c\le T_c\) 几乎处处。这是一个**同速率、不同激活概率**的 Bernoulli--指数和表示。它与 \(T_c\overset d=X_c+Z_c\) 的独立卷积表示等价，但两种表示的耦合结构不同：这里的差值与 \(X_c\) 不独立。
+
+进一步令
+\[
+\tau_i^X=-\frac{\log p_i^X}{\alpha_i},\qquad
+\tau_i^T=-\frac{\log p_i^T}{\alpha_i}.
+\]
+则
+\[
+B_i^X E_i\overset d=(E_i-\tau_i^X)_+,\qquad
+B_i^T E_i\overset d=(E_i-\tau_i^T)_+,
+\]
+并且
+\[
+\tau_i^T\le\tau_i^X.
+\]
+所以两个 CDF 可统一写成
+\[
+F(t;\boldsymbol\tau)
+=P\!\left(\sum_i(E_i-\tau_i)_+\le t\right),
+\qquad
+F_X(t)=F(t;\boldsymbol\tau^X),\quad
+F_T(t)=F(t;\boldsymbol\tau^T).
+\]
+这将 \(F_T/F_X\) 的比较转化为同一个凸次水平集概率对阈值向量的比较。
+
+### 5.5 相对 CDF 曲率的参数路径归约
+
+对任意固定阶段 \(i\)，令 \(F_{-i}(t)\) 为去掉该阶段后的和的 CDF，并令
+\[
+H_i(t)=\int_0^t \alpha_i e^{-\alpha_i(t-u)}F_{-i}(u)\,du.
+\]
+则精确地
+\[
+F(t;\boldsymbol\tau)
+=(1-p_i)F_{-i}(t)+p_iH_i(t),
+\qquad p_i=e^{-\alpha_i\tau_i}.
+\]
+因此
+\[
+\boxed{
+\partial_{\tau_i}\log F
+=\alpha_i p_i
+\frac{F_{-i}-H_i}
+{(1-p_i)F_{-i}+p_iH_i}
+\ge0.
+}
+\]
+沿着阈值线段
+\[
+\boldsymbol\tau(s)
+=\boldsymbol\tau^X+s(\boldsymbol\tau^T-\boldsymbol\tau^X),
+\qquad 0\le s\le1,
+\]
+有恒等式
+\[
+\boxed{
+\left(\log\frac{F_T}{F_X}\right)''
+=
+\int_0^1\sum_i
+(\tau_i^T-\tau_i^X)
+\,\partial_{tt\tau_i}\log F(t;\boldsymbol\tau(s))\,ds.
+}
+\]
+因 \(\tau_i^T-\tau_i^X\le0\)，若能证明相应谱阈值路径上
+\[
+\partial_{tt\tau_i}\log F(t;\boldsymbol\tau)\ge0,
+\]
+就得到
+\[
+h_T'(t)-h_X'(t)
+=\left(\log\frac{F_T}{F_X}\right)''\le0.
+\]
+这会给出一个比单独使用 \(F_X,F_T\) 对数凹性更强的比较：不仅 \(h_T\ge h_X\)，而且 \(h_T-h_X\) 非增。
+
+**目前没有把上述混合三阶导数符号写成定理。** Prékopa 定理只给出 \(\log F\) 对 \((t,\boldsymbol\tau)\) 的联合凹性，不能单独推出 \(\partial_{tt\tau_i}\log F\ge0\)。所需符号必须利用谱阈值 \(\tau_i=-\alpha_i^{-1}\log(1-\alpha_i/\rho_i)\) 的额外结构证明。即使得到 \(h_T'\le h_X'\)，还需要控制
+\[
+\partial_t^2\log(h_T-\alpha)
+-\partial_t^2\log(h_X+\beta)
+\]
+才能关闭完整的 \((\log r)''<0\)。
+
 ## 6. 真正剩下的 Robin 专属曲率不等式
 
 现在正值区间已确定为 \((0,t_*)\)。在该区间，
