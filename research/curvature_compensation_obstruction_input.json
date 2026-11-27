@@ -1,0 +1,21 @@
+{
+  "geometry": {
+    "left_layer_1_width": "25/66",
+    "left_layer_1_diffusivity": "25",
+    "left_layer_2_width": "4/33",
+    "left_layer_2_diffusivity": "1/4",
+    "right_half_width": "1/2",
+    "right_diffusivity": "1"
+  },
+  "robin_parameter": "kappa0 defined by L1(kappa0)=R1(kappa0)",
+  "crossing_wave_number_bracket": ["5.3476625759351", "5.3476625759352"],
+  "root_brackets": {
+    "L2": ["13.31949055029", "13.31949055031"],
+    "L3": ["25.79008806163", "25.79008806165"],
+    "R2": ["10.96080903510", "10.96080903513"],
+    "R3": ["16.83087110296", "16.83087110300"],
+    "L4": ["37.73662434174", "37.73662434176"],
+    "R4": ["22.85856781088", "22.85856781091"]
+  },
+  "interval_precision_decimal_digits": 60
+}
