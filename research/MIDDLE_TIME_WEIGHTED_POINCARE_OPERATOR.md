@@ -297,7 +297,7 @@ U_t\bigl(q_t-(\log f_Z)'\bigr),
 \qquad U_t(0)=U_t(t)=0.
 }
 \]
-这把条件方差问题转化成了一个一维边值问题。
+这把条件方差问题转化成了一个一维边值问题。右端点的极限不是零：由 Robin 小时间渐近，令 \\(u=t-z\\)，则 \\(p_t(z)\\) 与 \\(F_X(u)\\) 同阶，且 \\(U_t(z)=1+O(u^2)\\)，故 \\(U_t(t-)=1\\)。左端点则有 \\(U_t(z)\\sim(h_T-h_X(t))P_t(z)/p_t(z)=O(z^2)\\)。
 
 ### 5.1 与最优加权 Poincaré 权重的联系
 
@@ -376,3 +376,206 @@ C_t<\delta_t
 ## 8. 计算状态
 
 本轮是解析推导与文献核对，没有启动新的谱根计算或数值扫描。已有输入、谱根证书和晚时渐近结果均直接沿用。
+
+
+## 9. 直接协方差恒等式：无需估计完整 Poincaré 谱隙
+
+上一节的目标是为所有测试函数控制 \(C_t\)，但实际只需要控制特定函数 \(q_t\)。利用 Robin 延迟密度的正光学间隙，
+\[
+f_X(0+)=f_Z(0+)=0,
+\]
+可得到一个更直接的恒等式。
+
+### 9.1 两个分部积分恒等式
+
+记
+\[
+\ell_Z(z)=(\log f_Z(z))'.
+\]
+由于
+\[
+p_t(z)=\frac{F_X(t-z)f_Z(z)}{F_T(t)},
+\qquad
+\partial_t\log p_t(z)=q_t(z)-h_T(t),
+\]
+并且端点项因 \(F_X(0)=f_Z(0)=0\) 消失，有
+\[
+\boxed{
+\mathbb E_{\pi_t}[q_t(Z)]
+=
+\mathbb E_{\pi_t}[\ell_Z(Z)]
+=
+h_T(t).
+}
+\tag{9.1}
+\]
+第二个等式也可直接由
+\[
+\int_0^tF_X(t-z)f_Z'(z)\,dz
+=
+\int_0^tf_X(t-z)f_Z(z)\,dz
+=f_T(t)
+\]
+得到。
+
+对 \(h_T=\mathbb E_{\pi_t}\ell_Z\) 关于 \(t\) 求导，得到
+\[
+\boxed{
+h_T'(t)
+=
+\operatorname{Cov}_{\pi_t}
+\bigl(q_t(Z),\ell_Z(Z)\bigr).
+}
+\tag{9.2}
+\]
+所以
+\[
+\boxed{
+h_T'-h_X'
+=
+A_t(0)+
+\operatorname{Cov}_{\pi_t}
+\bigl(q_t(Z),\ell_Z(Z)\bigr).
+}
+\tag{9.3}
+\]
+因此，目标 (W) 等价于
+\[
+\boxed{
+\operatorname{Cov}_{\pi_t}
+\bigl(q_t(Z),(\log f_Z)'(Z)\bigr)
+<-A_t(0).
+}
+\tag{9.4}
+\]
+
+这把条件方差比较改写为一个反向风险率与延迟密度 score 之间的协方差比较。
+
+### 9.2 正核的单峰结构
+
+令
+\[
+K_t(x,y)=P_t(x\wedge y)\bar P_t(x\vee y)
+\]
+以及
+\[
+\boxed{
+W_t(y)=\int_0^t A_t(x)K_t(x,y)\,dx.
+}
+\]
+Hoeffding–Stein 协方差恒等式给出
+\[
+\operatorname{Cov}_{\pi_t}(q_t,\ell_Z)
+=
+\int_0^t\!\!\int_0^t
+A_t(x)\ell_Z'(y)K_t(x,y)\,dx\,dy,
+\]
+从而
+\[
+\boxed{
+h_T'-h_X'
+=
+A_t(0)+
+\int_0^tW_t(y)(\log f_Z(y))''\,dy.
+}
+\tag{9.5}
+\]
+
+这里 \(W_t\) 是严格正的权重。进一步将其拆开：
+\[
+\begin{aligned}
+W_t(y)
+={}&\bar P_t(y)\int_0^y A_t(x)P_t(x)\,dx\\
+&+P_t(y)\int_y^t A_t(x)\bar P_t(x)\,dx.
+\end{aligned}
+\]
+直接求导并使用
+\[
+\int_0^t A_t(x)\bar P_t(x)\,dx
+=
+\mathbb E_{\pi_t}[q_t]-q_t(0)
+\]
+得到一个更强的精确公式：
+\[
+\boxed{
+W_t'(y)=p_t(y)\,[h_T(t)-q_t(y)].
+}
+\tag{9.6}
+\]
+
+由于 \(q_t\) 严格递增，且
+\[
+q_t(0)<h_T(t)<q_t(t-)=+\infty,
+\]
+存在唯一 \(y_t\in(0,t)\) 满足
+\[
+\boxed{q_t(y_t)=h_T(t).}
+\]
+因此
+\[
+W_t'(y)>0\quad(0<y<y_t),\qquad
+W_t'(y)<0\quad(y_t<y<t).
+\]
+也就是说，**条件方差所诱导的 score-curvature 权重 \(W_t\) 严格单峰**。其峰值位置不是任意拟合参数，而由反向风险率方程精确确定。
+
+结合分部积分，
+\[
+\operatorname{Cov}_{\pi_t}(q_t,\ell_Z)
+=
+-\int_0^tW_t'(y)\ell_Z(y)\,dy.
+\]
+又因 \(\int_0^tW_t'=0\)，可减去 \(\ell_Z(y_t)\)：
+\[
+\boxed{
+\operatorname{Cov}_{\pi_t}(q_t,\ell_Z)
+=
+-\int_0^tW_t'(y)
+[\ell_Z(y)-\ell_Z(y_t)]\,dy.
+}
+\tag{9.7}
+\]
+
+这给出了一个直接的符号判据：如果 score \(\ell_Z\) 在 \(y_t\) 左侧严格高于其在 \(y_t\) 的值、右侧严格低于该值，那么协方差严格为负。当前 Robin 密度的 score 在晚时会因对数凸尾部而重新上升，故还需要控制其越过 \(\ell_Z(y_t)\) 后的尾部正贡献。
+
+### 9.3 与 Stein 因子的关系及端点
+
+由协方差核表示，
+\[
+W_t(y)=p_t(y)U_t(y).
+\]
+因此 \(W_t\) 单峰等价于
+\[
+(p_tU_t)'=p_t(h_T-q_t).
+\]
+端点小时间渐近给出
+\[
+U_t(z)=O(z^2),\qquad z\downarrow0,
+\]
+以及
+\[
+U_t(z)=1+O((t-z)^2),\qquad z\uparrow t.
+\]
+所以
+\[
+W_t(0+)=W_t(t-)=0,
+\]
+且 (9.5) 中的加权曲率积分收敛。
+
+### 9.4 新的中间时间目标
+
+由 (9.5)，真正需要证明的条件方差补偿不再要求估计完整算子范数 \(C_t\)，而是只需证明
+\[
+\boxed{
+\int_0^tW_t(y)(\log f_Z(y))''\,dy<-A_t(0).
+}
+\tag{9.8}
+\]
+这比 \(C_t<\delta_t\) 更贴近所需结论，因为它只针对实际测试函数 \(q_t\)，而不是对所有 Sobolev 函数作统一控制。
+
+已知
+\[
+(\log f_Z)''<0
+\]
+在小时区间成立，而特定 Robin 谱排序下它在晚时转正。式 (9.8) 将中间时间问题精确化为：由 \(q_t(y_t)=h_T(t)\) 定位的单峰权重，能否使早时负曲率的积分贡献严格压过晚时正曲率及边界项 \(A_t(0)\)。
+
+**本轮已完成精确恒等式和权重单峰性；式 (9.8) 的全中间时间严格估计仍待证明。** 这一步不需要重算晚时留数，也不需要重新证明 \(Z_c\) 的全局对数凹性。
