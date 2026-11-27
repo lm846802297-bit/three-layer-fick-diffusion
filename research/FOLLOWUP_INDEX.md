@@ -31,6 +31,8 @@
 - [条件势点态凸性条件的谱参数障碍](CURVATURE_COMPENSATION_OBSTRUCTION.md)：构造首模逆序 Robin 参数族，证明全域点态曲率补偿条件失效；不否定最终反超次数上限。
 - [首模逆序导数比值的精确卷积归约](FIRST_INVERSION_RATIO_SHAPE_REDUCTION.md)：将 (G_R'/G_L') 化为正延迟卷积与公共对数凹核的组合；单峰传递引理已证，Robin 比值对数凹性仍待证明。
 
+- [条件方差的加权控制与首次通过时间文献边界](WEIGHTED_CONDITIONAL_VARIANCE_AND_FIRST_PASSAGE_LITERATURE.md)：区分 Keilson/Assaf 的单一首次通过密度结论，建立 Stein-kernel 条件方差判据，并得到近打平晚时的谱渐近方差裕量。
+
 附录脚本和原始运行输出在本目录。部分脚本为浮点筛查，不能作为全域证明。后续归档完整性可用 SHA-256 校验：
     
     sha256sum -c FOLLOWUP_SHA256SUMS
