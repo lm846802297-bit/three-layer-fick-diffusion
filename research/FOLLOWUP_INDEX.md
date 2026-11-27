@@ -25,6 +25,7 @@
 - [固定几何的 Robin 反超临界值](FIRST_INVERSION_STATIC_TIE_ROBIN_TRANSITION.md)：整个 κ∈[1,10] 的时域复核与实际反超从一次变零次的唯一临界 κ。
 - [左壁最终占优侧的局部折叠幂律](FIRST_INVERSION_POSITIVE_STATIC_FOLD_LAW.md)：分类静态打平附近的真实反超，并证明已认证临界几何有唯一折叠曲线。
 - [左壁最终占优时的第二负谷门槛](FIRST_INVERSION_POSITIVE_TIME_GATES.md)：解析限制第二次向下入口，并明确单谷形状在通用卷积下不保真。
+- [半谱与全谱接合：连续参数区的两次上限](FIRST_INVERSION_POSITIVE_SPECTRAL_BRIDGE.md)：在固定几何的 κ∈[1.5,5.35] 排除第二负谷，并给其它几何的可检验判据。
 
 附录脚本和原始运行输出在本目录。部分脚本为浮点筛查，不能作为全域证明。后续归档完整性可用 SHA-256 校验：
     
