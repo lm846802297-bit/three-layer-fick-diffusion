@@ -4,3 +4,6 @@ certified 80000 140000 /1e8 sign -1 derivative order 0 subintervals 32
 certified 140000 170000 /1e8 sign 1 derivative order 1 subintervals 3
 certified 170000 1710000 /1e8 sign 1 derivative order 0 subintervals 14
 unique upward hazard threshold crossing in 0.00154295 0.00154296
+ground lambda_1 [5.8515341637899088761808999999999999999999999979472, 5.8515341638866686543025000000000000000000000011046]
+ground right/left wall eigenfunction values [0.87365321798231325784959684596003738001624622209295, 0.87365321801268081404803708277508922897915032160151]
+c1>0: physical cumulative difference has exactly one strict reversal

@@ -107,3 +107,22 @@ while right-left>1:
 assert bounds(exact_decimal(left),exact_decimal(left))<0
 assert bounds(exact_decimal(right),exact_decimal(right))>0
 print('unique upward hazard threshold crossing in',exact_decimal(left),exact_decimal(right))
+
+# Sign of the physical leading residue c1 using the full ground wave number.
+def full_at(k):
+    y=iv.cos(k*l1)+kappa*v/k*iv.sin(k*l1)
+    q0=kappa*iv.cos(k*l1)-k/v*iv.sin(k*l1)
+    left_y=YL(k)
+    left_q=q0*iv.cos(k*l2)-(k/u)*y*iv.sin(k*l2)
+    right_y=YR(k)
+    right_q=kappa*iv.cos(k/2)-k*iv.sin(k/2)
+    return left_y*right_q+right_y*left_q, left_y, right_y
+left,right=I('2.41899445303'),I('2.41899445305')
+assert full_at(left)[0]>0 and full_at(right)[0]<0
+k=I(['2.41899445303','2.41899445305'])
+assert k**2<a  # below the first split half eigenvalue; interlacing identifies lambda_1
+_, yl, yr=full_at(k)
+assert yl>0 and yr>yl
+print('ground lambda_1',k**2)
+print('ground right/left wall eigenfunction values',yl/yr)
+print('c1>0: physical cumulative difference has exactly one strict reversal')
