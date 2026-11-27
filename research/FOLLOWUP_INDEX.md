@@ -17,6 +17,7 @@
 - [单个晚时 J 零点与静态打平面](FIRST_INVERSION_SINGLE_LATE_ZERO.md)：严格逆序时的唯一晚时上穿率，以及双消失邻域真实捕获差的全时间正性。
 - [静态打平面的实 Laplace 变换](FIRST_INVERSION_STATIC_TIE_LAPLACE.md)：变换恰有一个简单零点；显式反例说明这一性质不能反推出时间域零点上限。
 - [静态打平面的时间域单零点判据](FIRST_INVERSION_STATIC_TIE_TIME.md)：消去逆序极点后的公共核严格对数凹，给出仅用正常半谱的风险率判据；临界邻域严格只有一个简单零点。
+- [均匀右半区的风险率晚时界](FIRST_INVERSION_STATIC_TIE_UNIFORM_RIGHT.md)：Robin 特征函数精确消去高频积，给风险率阈值以上的显式截止；中间窗仍未关闭。
 
 附录脚本和原始运行输出在本目录。部分脚本为浮点筛查，不能作为全域证明。后续归档完整性可用 SHA-256 校验：
     
