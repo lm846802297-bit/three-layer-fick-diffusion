@@ -92,7 +92,7 @@ R_3\in[262.1914603604,262.1914603611].
 \rho_2<\sigma_2<\rho_3,\qquad \sigma_3>\rho_3.
 \]
 这些区间来自现有归档
-[两侧精确特征函数封闭正常谱尾矩](FIRST_INVERSION_STATIC_TIE_UNIFORM_RIGHT_EXACT_MOMENTS.md)，无需重新求谱。
+[两侧精确特征函数封闭正常谱尾矩](../FIRST_INVERSION_STATIC_TIE_UNIFORM_RIGHT_EXACT_MOMENTS.md)，无需重新求谱。
 
 所以，晚时对数凸性已经在实际 Robin 基准中成立，而非仅仅是一般 Bernoulli--指数和的抽象可能性。
 
@@ -154,7 +154,7 @@ h_T'\le
 \frac{A(Z)B(Z)}{A(Z)+B(Z)}<0.
 }
 \]
-这是局部条件方差上界；它本身尚未给出 \(h_T'<h_X'(t)\)，也尚未关闭完整的 \((\log r)''<0\)。
+当 \(A>0\) 在正测度集合上成立时，上式为严格负值。这是局部条件方差上界；它本身尚未给出 \(h_T'<h_X'(t)\)，也尚未关闭完整的 \((\log r)''<0\)。
 
 ## 6. 文献位置
 
