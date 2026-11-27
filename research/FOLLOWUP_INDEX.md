@@ -21,6 +21,7 @@
 - [固定打平基准的全时间单零点证书](FIRST_INVERSION_STATIC_TIE_MIDDLE_CERTIFICATE.md)：严格认证中间窗和两个端点段，给该基准唯一风险率上穿与唯一简单 J 零点。
 - [静态打平面的剥离输入单零点](FIRST_INVERSION_STATIC_TIE_STRIPPED_INPUT.md)：方差张量化与右谱级数控制去掉共同高阶等待后的单下穿；未证明传到完整 J。
 - [静态打平首逆序的全时间单零点定理](FIRST_INVERSION_STATIC_TIE_COMPLETE.md)：逐段恢复高阶指数等待，封闭打平子域及有严格光学间隙的左壁最终落后侧；不覆盖整个模型。
+- [同一几何的真实反超对照](FIRST_INVERSION_STATIC_TIE_GROUND_CONTRAST.md)：κ=4 与 8 的 J 都只有一个零点，但累计差分别反超一次和零次。
 
 附录脚本和原始运行输出在本目录。部分脚本为浮点筛查，不能作为全域证明。后续归档完整性可用 SHA-256 校验：
     
