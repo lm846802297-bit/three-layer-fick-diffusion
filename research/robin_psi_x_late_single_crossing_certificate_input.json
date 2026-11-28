@@ -1,0 +1,42 @@
+{
+  "benchmark": {
+    "w1": "25/66",
+    "D1": "25",
+    "w2": "4/33",
+    "D2": "1/4",
+    "right_width": "1/2",
+    "D_right": "1",
+    "kappa": "4"
+  },
+  "spectral_roots": {
+    "global_roots": 102,
+    "right_half_roots": 101,
+    "root_scan_step": "0.05",
+    "interval_root_half_width": "1e-35",
+    "mpmath_digits": 90,
+    "interval_digits": 70,
+    "residue_modes": 100
+  },
+  "time_certification": {
+    "negative_interval": ["0.010", "0.0144"],
+    "positive_interval": ["0.0145", "0.020"],
+    "crossing_derivative_interval": ["0.0144", "0.0145"],
+    "box_width": "0.000002",
+    "crossing_derivative_boxes": 100,
+    "late_start": "0.020"
+  },
+  "tail_bounds": {
+    "residue_constant": "3e7",
+    "rate_upper_constant": "100*pi^2",
+    "rate_lower_constant": "2.4",
+    "tail_start_index": 101,
+    "modes_used": 100
+  },
+  "acceptance": [
+    "N_X < 0 on [0.010,0.0144]",
+    "N_X > 0 on [0.0145,0.020]",
+    "N_X_prime > 0 on [0.0144,0.0145]",
+    "f_X_prime < 0 and f_X_second > 0 for t >= 0.020"
+  ],
+  "scope": "This certificate closes only t>=0.010 for the sign shape of psi_X prime. The interval (0,0.010) remains open."
+}
