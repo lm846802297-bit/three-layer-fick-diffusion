@@ -46,8 +46,15 @@ assert logHsecond_t2_upper.b<I('0.20')
 main_coeff=delta**2/2-I('1.7')*t0
 assert main_coeff.a>I('0.0139')
 main_curvature_upper=-I('0.0139')/t0**3
+# The logarithmic first derivative is positive: its t^2-scaled lower
+# bound is decreasing in t and remains positive at t0.
+logderiv_lower_coeff=delta**2/4-I('1.5')*t0-(c_upper+H0prime_upper/H0_lower)*t0**2
+assert logderiv_lower_coeff.a>0
 logderiv_coeff=delta**2/4+(c_upper+H0prime_upper/H0_lower)*t0**2
 assert logderiv_coeff.b<I('0.009')
+# Since (log f0)''<0 and 3/2+(log H0)''*t^2>1.3>0,
+# its absolute value is below delta^2/(2 t^3).
+assert I('1.5')-I('0.20')>0
 logsecond_coeff=delta**2/2
 assert logsecond_coeff.b<I('0.019')
 a=I(5)/66; b=I(16)/66; d0=delta+2*a
