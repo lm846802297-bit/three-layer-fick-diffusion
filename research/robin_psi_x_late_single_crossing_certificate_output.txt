@@ -1,0 +1,14 @@
+ROBIN_PSI_X_LATE_SINGLE_CROSSING_CERTIFICATE: PASS
+N modes 100 interval digits 70
+global Sturm node counts verified 102 roots: n-th root has n-1 interior zeros
+right-half roots enclosed in their Sturm brackets ((2j-1)pi,2jpi)
+lambda2 [15.801123064644832825147229497...]
+B2 [41.952785704841997044430781788...]
+B3 [55.187934234107734660035161350...]
+N_X upper on [0.010,0.0144] -456.203...
+N_X lower on [0.0145,0.020] 1056.56...
+N_X_prime lower on [0.0144,0.0145] 15569900...
+fprime first-pair [-1356.2070172520385,-1356.2070172520368] tail abs [292.8736263...]
+fsecond first-pair [100310.604... ] tail abs [66462.626...]
+fprime <0 and fsecond >0 for t>=0.020 by exponential ratio monotonicity
+runtime 33.7 s; Python 3.13.5; mpmath 1.3.0; Linux x86_64
