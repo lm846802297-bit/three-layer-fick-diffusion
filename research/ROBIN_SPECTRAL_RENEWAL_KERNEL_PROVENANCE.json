@@ -4,7 +4,7 @@
   "base_commit": "b446ed0f79b0082ccf1c6636c05f284785c24051",
   "artifact": {
     "path": "research/ROBIN_SPECTRAL_RENEWAL_KERNEL_AND_REVERSE_HAZARD_COMPARISON.md",
-    "sha256": "39a8ded0f424da4514e79a377c0f33cb912267a6a6398262f37841fc630732ce"
+    "sha256": "6ea3c34ecf6fb859fcda5a3aa5741d9ca1c0141915ceb968d77bcf6bcf0ec338"
   },
   "inputs": [
     {
@@ -24,7 +24,7 @@
       "sha256": "b1c813811df5fc8527110ab97c78a29d7eb420fa4652040ac15ee16e5dbe71e0"
     }
   ],
-  "method": "Analytic derivation only: Laplace differentiation, uniqueness of Laplace transforms, Sturm-Liouville Weyl counting, and existing conditional-score identities.",
+  "method": "Analytic derivation only: Laplace differentiation, uniqueness of Laplace transforms, Sturm-Liouville Weyl counting, conditional-score identities, and differentiation of the renewal equation.",
   "computation": "No numerical computation or new spectral-root calculation was performed.",
   "literature": [
     {
