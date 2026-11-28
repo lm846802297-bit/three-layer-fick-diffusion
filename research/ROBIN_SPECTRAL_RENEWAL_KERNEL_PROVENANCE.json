@@ -1,0 +1,41 @@
+{
+  "repository": "lm846802297-bit/three-layer-fick-diffusion",
+  "branch": "research/two-parameter-spectral-bridge-2026-11-27",
+  "base_commit": "b446ed0f79b0082ccf1c6636c05f284785c24051",
+  "artifact": "research/ROBIN_SPECTRAL_RENEWAL_KERNEL_AND_REVERSE_HAZARD_COMPARISON.md",
+  "artifact_sha256": "9a09bb2ee926c20269da54f7b54e6f0f83cd21dbc0fe0500e56d1cfc5074cce2",
+  "inputs": [
+    {
+      "path": "research/FIRST_INVERSION_RATIO_SHAPE_REDUCTION.md",
+      "sha256": "68369ee9e019a1f04ab247b1f62fa0c28f208010e245ef390d53c7a8d75b4a50"
+    },
+    {
+      "path": "research/CONDITIONAL_CDF_GAP_PEAK_ASYMPTOTICS.md",
+      "sha256": "46aaea817f67b703dfb3dbfac1372c09e5b7184de99733c64a5ae0cc3bd16135"
+    },
+    {
+      "path": "research/WEIGHTED_CONDITIONAL_VARIANCE_AND_FIRST_PASSAGE_LITERATURE.md",
+      "sha256": "8f53cd2db8a7792651b0965730a9f96df2f2312c3610a7d850f68c63809c902c"
+    },
+    {
+      "path": "research/ROBIN_DELAY_LEVY_BELLSHAPE_REDUCTION.md",
+      "sha256": "d47d3f06eef22f2904ce9b84e450b033b8dc88ca2ac2b33530344bdc5b63a4e6"
+    }
+  ],
+  "method": "Analytic derivation only: Laplace differentiation, uniqueness of Laplace transforms, Sturm-Liouville Weyl counting, and existing conditional-score identities.",
+  "computation": "No numerical computation or new spectral-root calculation was performed.",
+  "literature": [
+    {
+      "reference": "L. Bondesson, Z. Wahrscheinlichkeitstheorie verw. Gebiete 57 (1981), 39-71",
+      "doi": "10.1007/BF00533713"
+    },
+    {
+      "reference": "S. Bridaa, W. Jedidi, H. S. Sendov, Journal of Theoretical Probability",
+      "doi": "10.1007/s10959-023-01242-z"
+    },
+    {
+      "reference": "M. Kwaśnicki and T. Simon, Mathematische Zeitschrift 301 (2022), 3207-3230",
+      "doi": "10.1007/s00209-022-02997-7"
+    }
+  ]
+}
