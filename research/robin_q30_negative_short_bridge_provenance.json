@@ -1,0 +1,23 @@
+{
+  "repository": "lm846802297-bit/three-layer-fick-diffusion",
+  "branch": "research/two-parameter-spectral-bridge-2026-11-27",
+  "artifact": "Q30 negative-sign bridge on [0.0015,0.004]",
+  "source": {"path": "research/robin_q30_negative_short_bridge.py", "sha256": "f9ff995bf23f14f4d733425813b0183cebd656486e5ef856e5f9c1bad2a319b3"},
+  "input": {"path": "research/robin_q30_negative_short_bridge_input.json", "sha256": "f0f573434bcba36a95eb86ccc4fa727200a0002d0ef09fc1851797e96a2e8a6d"},
+  "native_output": {"path": "research/robin_q30_negative_short_bridge_output.txt", "sha256": "af3dd05ff76cc5bac039d828788634afe6b3995f3570690d9ed7fc8728ce8972"},
+  "runtime": {"python": "3.13.5", "mpmath": "1.3.0", "interval_precision_decimal_digits": 60, "os": "Linux-6.18.57-x86_64-with-glibc2.41", "architecture": "x86_64", "exposed_cpus": 5},
+  "method": {
+    "finite_spectrum": "Q30 evaluated by interval arithmetic on 2000 subintervals",
+    "additional_roots": "R2 through R70 enclosed by interval sign brackets and Prüfer phase cells",
+    "omitted_pairs": "30 < max(i,j) <= 70 bounded termwise at tau=0.001",
+    "infinite_tail": "max(i,j)>70 bounded by analytic Gaussian double-spectrum estimates"
+  },
+  "certified_results": {
+    "time_window": ["0.0015", "0.004"],
+    "Q30_maximum_upper": "<-272986093.4318162684005355",
+    "finite_omitted_pair_bound": "<0.309700015075717",
+    "Gaussian_tail_bound": "<0.006559614543942",
+    "total_sup_abs_Q_minus_Q30": "<0.316259629619659",
+    "full_QZ_upper": "<-272986093.1155566387808768"
+  }
+}
