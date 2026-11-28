@@ -3,7 +3,7 @@
   "branch": "research/two-parameter-spectral-bridge-2026-11-27",
   "artifact": {
     "path": "research/ROBIN_CURVATURE_AGGREGATE_SPECTRAL_TAIL.md",
-    "sha256": "28abbeb6f1d51921f3a7afb805c1003edd4a09b8f1112a2ce10a525fb6bc2d3b"
+    "sha256": "b1c25501a7f9aa518d6f3c7b89b9c13a7de1914947f78d96c986173ddfc5a366"
   },
   "inputs": [
     {
@@ -23,16 +23,16 @@
       "sha256": "fd40db8509e499ccfeb312b7870958ae1e2d3be3c488479baea688f248acc0d8"
     }
   ],
-  "method": "Analytic transfer-matrix bounds for the uniform right Robin half-spectrum; residue formula from normalized half-spectrum characteristic functions; absolute aggregation of the double-residue series; inverse-Laplace saddle expansion of the exact hyperbolic transfer-matrix ratio.",
+  "method": "Analytic transfer-matrix bounds for the uniform right Robin half-spectrum; residue formula from normalized half-spectrum characteristic functions; absolute aggregation of the double-residue series; inverse-Laplace saddle expansion of the exact hyperbolic transfer-matrix ratio. The short-time inverse-Laplace prefactor is corrected by L1/R1 because the first half-spectrum roots are distinct.",
   "computation": "No new certified eigenvalue computation or numerical scan was used. The low-mode ordering is inherited from the previously archived interval certificate. The coefficient and tail bounds are analytic.",
   "assumptions": [
-    "Static-tie benchmark with common first half-spectrum eigenvalue c",
+    "Static equal-resistance benchmark with distinct first half-spectrum roots L1<c<R1",
     "Uniform right half with length 1/2, diffusivity 1, Robin parameter kappa>0",
-    "Simple half-spectrum roots and the established residue expansion"
+    "Simple half-spectrum roots and the established residue expansion",
+    "The high-frequency canonical-product normalization includes the factor L1/R1"
   ],
   "open_items": [
-    "Choose an explicit small-time cutoff with a fully quantified differentiated saddle remainder",
-    "Certify the unique zero of a finite Q_N on the middle interval",
-    "Select explicit N and verify the C1 tail bounds with sufficient margin"
+    "Connect the now-certified full-time unique zero of (log f_Z)'' at kappa=4 to the score-renewal inequality h_T'<h_X'",
+    "Complete the final r(t) unimodality theorem for the intended parameter domain"
   ]
 }
