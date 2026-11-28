@@ -1,0 +1,19 @@
+{
+  "geometry": {
+    "left_layer_1_width": "25/66",
+    "left_layer_1_diffusivity": "25",
+    "left_layer_2_width": "4/33",
+    "left_layer_2_diffusivity": "1/4",
+    "right_half_width": "1/2",
+    "right_half_diffusivity": "1"
+  },
+  "robin_parameter": "4",
+  "global_roots_requested": 62,
+  "right_half_roots_requested": 61,
+  "root_scan_step": "0.05",
+  "mpmath_decimal_precision": 60,
+  "residue_modes_used": 60,
+  "root_bracket_seed_offset": "1e-5",
+  "psi_prime_root_initial_bracket": ["0.014", "0.015"],
+  "purpose": "Exploratory sign-shape and truncation-stability study; not a rigorous interval certificate."
+}
