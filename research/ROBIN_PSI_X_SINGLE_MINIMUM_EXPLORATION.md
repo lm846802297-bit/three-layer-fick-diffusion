@@ -143,9 +143,10 @@ d_X=\ell_L=\frac7{22}.
 \]
 因此
 \[
-f_X(t)\sim C_Xt^{-3/2}e^{-d_X^2/(4t)},
+f_X(t)\sim C_Xt^{-5/2}e^{-d_X^2/(4t)},
 \qquad
-F_X(t)\sim\frac{4t^2}{d_X^2}f_X(t).
+F_X(t)\sim\frac{4t^2}{d_X^2}f_X(t)
+\sim\frac{4C_X}{d_X^2}t^{-1/2}e^{-d_X^2/(4t)}.
 \]
 由此
 \[
