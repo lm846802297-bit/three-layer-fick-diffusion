@@ -4,7 +4,7 @@
   "artifact": {
     "path": "research/ROBIN_PSI_X_SINGLE_MINIMUM_EXPLORATION.md",
     "status": "analytic derivation plus exploratory numerical evidence; no interval theorem claimed",
-    "git_blob_sha1": "c0c5302cce1168b6310dfb4ca75d03d40070a60b",
+    "git_blob_sha1": "3ac721ebdf265a3078f9cf4f1c09d085d9b51d45",
     "note": "Corrected the X_c high-frequency prefactor to t^(-5/2); the associated CDF prefactor is t^(-1/2)."
   },
   "source": {
