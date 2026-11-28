@@ -3,7 +3,7 @@
   "branch": "research/two-parameter-spectral-bridge-2026-11-27",
   "artifact": {
     "path": "research/ROBIN_REVERSE_HAZARD_DERIVATIVE_REDUCTION.md",
-    "git_blob_sha1": "16e18c371068318ae5fe5abad987de46afd6fb26",
+    "git_blob_sha1": "0d13582198908b2774ce16e565e8d7af2ff23062",
     "hash_note": "GitHub commit SHA is recorded for this analytic-only revision; no numerical source or input dataset was generated."
   },
   "method": "Analytic derivation only; no new spectral roots, numerical scans, or numerical certificate were produced.",
@@ -36,12 +36,14 @@
     "Exact monotone-weight integral for h_X'-h_T'",
     "Exact single-integral representation under the law of U_t=t-Z conditional on T_c<=t",
     "The sufficient condition psi_X'>=0 globally is ruled out by the short-time asymptotic and late-time pole asymptotic",
-    "The origin weight w_t(u) has O(u^(5/2) exp(-d_X^2/(4u))) decay, making the weighted psi_X' integral convergent"
+    "The origin weight w_t(u) has O(u^(5/2) exp(-d_X^2/(4u))) decay, making the weighted psi_X' integral convergent",
+    "Short-time asymptotic: h_X'(t)-h_T'(t)=9/(121 t^3)+O(t^-2)>0 for sufficiently small t, from d_X=7/22 and d_T=1/2."
   ],
   "open_items": [
     "Certify that psi_X' is negative only on an initial interval and nonnegative thereafter, with a rigorous enclosure of its sign-change point u_0.",
     "For a chosen epsilon>z_*, certify the scalar margin D(epsilon)>0 in equation (7.3) using the existing root enclosures and analytic spectral tails.",
-    "Close the remaining short-time interval 0<t<=2 epsilon for h_X'-h_T'."
+    "Close the remaining short-time interval 0<t<=2 epsilon for h_X'-h_T'.",
+    "Make the short-time remainder explicit up to the chosen finite cutoff, so it connects to the weighted-tail criterion."
   ],
   "runtime": "No code execution. This is an analytic derivation based on existing archived results."
 }
