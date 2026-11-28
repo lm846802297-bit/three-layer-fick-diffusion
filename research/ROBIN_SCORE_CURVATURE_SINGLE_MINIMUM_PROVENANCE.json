@@ -1,0 +1,35 @@
+{
+  "repository": "lm846802297-bit/three-layer-fick-diffusion",
+  "branch": "research/two-parameter-spectral-bridge-2026-11-27",
+  "base_commit": "a0dcc9544bbdd3a1d8a6c9a3129915d830e8ae5a",
+  "artifact": {
+    "path": "research/ROBIN_SCORE_CURVATURE_SINGLE_MINIMUM.md",
+    "sha256": "9b5a9df8d1cc5db3aba622a5e85d8a249a73e8e7c5028f8b71c62ee4d8d4d629"
+  },
+  "inputs": [
+    {
+      "path": "research/ZC_DENSITY_CURVATURE.md",
+      "sha256": "5bd96980a44052047cc6ec4d34083b9b4d50dbc98ed4c7e8806649cad193f929"
+    },
+    {
+      "path": "research/ROBIN_SPECTRAL_RENEWAL_KERNEL_AND_REVERSE_HAZARD_COMPARISON.md",
+      "sha256": "c27a08885db00688a1556e103b69ce292f179a2601debee7aebaf7f14c289410"
+    }
+  ],
+  "method": "Analytic derivation: inverse-Laplace residue expansion, pairwise symmetrization of f f''-(f')^2, exact residue-sign counting, and Weyl counting at the right half-spectrum poles.",
+  "computation": "No numerical computation, spectral-root solve, or scan was performed. Existing Weyl asymptotics and certified spectral ordering were reused.",
+  "literature": [
+    {
+      "reference": "U. Sumita and Y. Masuda, Classes of probability density functions having Laplace transforms with negative zeros and poles, Advances in Applied Probability 19 (1987), 632-651",
+      "doi": "10.2307/1427410"
+    },
+    {
+      "reference": "B. G. Hansen, On Log-Concave and Log-Convex Infinitely Divisible Sequences and Densities, Annals of Probability 16 (1988), 1832-1839",
+      "doi": "10.1214/aop/1176991600"
+    },
+    {
+      "reference": "J. Keilson, Log-concavity and log-convexity in passage time densities of diffusion and birth-death processes, Journal of Applied Probability 8 (1971), 391-398",
+      "doi": "10.2307/3211909"
+    }
+  ]
+}
