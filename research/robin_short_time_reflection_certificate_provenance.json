@@ -1,20 +1,59 @@
 {
   "repository": "lm846802297-bit/three-layer-fick-diffusion",
   "branch": "research/two-parameter-spectral-bridge-2026-11-27",
-  "artifact": {"path": "research/ROBIN_SHORT_TIME_REFLECTION_CERTIFICATE.md", "sha256": "e1e74093eb8e1d9f7dd7da08da6f1d732b0f2fd5aefc8117cf4b9b0266468455"},
-  "source": {"path": "research/robin_short_time_reflection_certificate.py", "sha256": "ac7719f070c4ce6ef1d2ffeb47b0ad5a8b40e237c960a91e5b0efbad6240ea73"},
-  "input": {"path": "research/robin_short_time_reflection_certificate_input.json", "sha256": "d17d7b54cc1ddb8b9bddd4cae46c9ce1d3d836abf66577994e9b64941bbf0876"},
-  "native_output": {"path": "research/robin_short_time_reflection_certificate_output.txt", "sha256": "ebb51ad58e75ad9ccbf03201974d78d32078b946e920983cc0ae45af536bc50e"},
+  "artifact": {
+    "path": "research/ROBIN_SHORT_TIME_REFLECTION_CERTIFICATE.md",
+    "sha256": "e4f48c9a7b01d6d781bfdb1c3b98fc331bddaf392a09bde5703e964e87144048"
+  },
+  "source": {
+    "path": "research/robin_short_time_reflection_certificate.py",
+    "sha256": "f796313aa961f1ebf5adc3c6342b6a601adf624694ae3e1bba3327e5718994d7"
+  },
+  "input": {
+    "path": "research/robin_short_time_reflection_certificate_input.json",
+    "sha256": "d17d7b54cc1ddb8b9bddd4cae46c9ce1d3d836abf66577994e9b64941bbf0876"
+  },
+  "native_output": {
+    "path": "research/robin_short_time_reflection_certificate_output.txt",
+    "sha256": "ebb51ad58e75ad9ccbf03201974d78d32078b946e920983cc0ae45af536bc50e"
+  },
   "dependencies": [
-    {"path": "research/robin_q30_interval_certificate.py", "sha256": "00c3d30064f9826ca3bdaeca7eb3c3bb448d20a1d705bb515cac523fcca47180", "role": "certified interval enclosures for L1, R1 and lambda_2"},
-    {"path": "research/robin_q30_interval_certificate_output.txt", "sha256": "cc8340c42bcc5291259c0d64a62887d7d98f1ce002bd9e73fb7669fb72822a06", "role": "native output containing the root brackets reused by the short-time proof"},
-    {"path": "research/robin_q30_negative_short_bridge.py", "sha256": "f9ff995bf23f14f4d733425813b0183cebd656486e5ef856e5f9c1bad2a319b3", "role": "independent Q30 negative-sign bridge on [0.0015,0.004]"},
-    {"path": "research/robin_q30_negative_short_bridge_output.txt", "sha256": "af3dd05ff76cc5bac039d828788634afe6b3995f3570690d9ed7fc8728ce8972", "role": "native output for the adjacent finite-spectrum bridge"}
+    {
+      "path": "research/robin_q30_interval_certificate.py",
+      "sha256": "00c3d30064f9826ca3bdaeca7eb3c3bb448d20a1d705bb515cac523fcca47180",
+      "role": "certified interval enclosures for L1, R1 and lambda_2"
+    },
+    {
+      "path": "research/robin_q30_interval_certificate_output.txt",
+      "sha256": "cc8340c42bcc5291259c0d64a62887d7d98f1ce002bd9e73fb7669fb72822a06",
+      "role": "native output containing the root brackets reused by the short-time proof"
+    },
+    {
+      "path": "research/robin_q30_negative_short_bridge.py",
+      "sha256": "f9ff995bf23f14f4d733425813b0183cebd656486e5ef856e5f9c1bad2a319b3",
+      "role": "independent Q30 negative-sign bridge on [0.0015,0.004]"
+    },
+    {
+      "path": "research/robin_q30_negative_short_bridge_output.txt",
+      "sha256": "af3dd05ff76cc5bac039d828788634afe6b3995f3570690d9ed7fc8728ce8972",
+      "role": "native output for the adjacent finite-spectrum bridge"
+    }
   ],
-  "runtime": {"python": "3.13.5", "mpmath": "1.3.0", "interval_precision_decimal_digits": 70, "os": "Linux-6.18.57-x86_64-with-glibc2.41", "architecture": "x86_64", "exposed_cpus": 5, "processor": "not exposed by runtime"},
+  "runtime": {
+    "python": "3.13.5",
+    "mpmath": "1.3.0",
+    "interval_precision_decimal_digits": 70,
+    "os": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "architecture": "x86_64",
+    "exposed_cpus": 5,
+    "processor": "not exposed by runtime"
+  },
   "method": "Exact hyperbolic transfer-matrix factorization; positive convolution ratios for the rational main factor; reflection-path extraction at optical length d0=1/3; a differentiated Bromwich estimate using J_n(A)<=64/sqrt(A); 70-digit interval checks for all constants.",
   "certified_results": {
-    "short_time_window": ["0", "0.0015"],
+    "short_time_window": [
+      "0",
+      "0.0015"
+    ],
     "reflection_exponent_alpha": "0.01951331496786042240587695133149678604",
     "H0_lower_bound": ">0.9470065151919999",
     "t0_squared_log_H0_second_derivative_bound": "<0.1890815022136707",
@@ -22,7 +61,12 @@
     "reflection_epsilon_prime_sup": "<2.9204047867370",
     "reflection_epsilon_second_sup": "<48393.766081562",
     "log_reflection_curvature_sup": "<48410.719065984",
-    "full_log_curvature_upper_at_t0": "<-4070107.7994525"
+    "full_log_curvature_upper_at_t0": "<-4070107.7994525",
+    "logarithmic_first_derivative_sign": "positive on (0,0.0015]",
+    "logarithmic_first_derivative_coefficient_upper": "<0.009",
+    "logarithmic_second_derivative_absolute_coefficient": "<delta^2/2<0.019, using the already-certified negative sign"
   },
-  "limitations": ["The proof is for the specified kappa=4 static equal-resistance benchmark; it is not uniform over other Robin parameters or geometries."]
+  "limitations": [
+    "The proof is for the specified kappa=4 static equal-resistance benchmark; it is not uniform over other Robin parameters or geometries."
+  ]
 }
