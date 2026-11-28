@@ -302,6 +302,7 @@ t^2(\log f_0)'=\frac{\delta^2}{4}-\frac32t
 \qquad |(\log f_0)''(t)|<\frac{\delta^2}{2t^3}<\frac{0.019}{t^3}.}
 
 \]
+\tag{3.10}
 
 ## 4. 反射项的 Bromwich 统一界
 
