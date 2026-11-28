@@ -4,7 +4,7 @@
   "artifact": {
     "path": "research/ROBIN_PSI_X_SINGLE_MINIMUM_EXPLORATION.md",
     "status": "analytic derivation plus exploratory numerical evidence; no interval theorem claimed",
-    "git_blob_sha1": "4712143c0e417afaa53404cd5c64bd00847195b0"
+    "git_blob_sha1": "c0c5302cce1168b6310dfb4ca75d03d40070a60b"
   },
   "source": {
     "path": "research/robin_psi_x_exact_residue_exploration.py",
