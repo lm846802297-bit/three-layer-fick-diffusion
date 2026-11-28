@@ -57,6 +57,9 @@
 - [Robin 反向风险率导数比较：精确一维加权积分归约](ROBIN_REVERSE_HAZARD_DERIVATIVE_REDUCTION.md)：将 h_X'-h_T' 精确改写为单调条件权重下的积分，并得到等价单积分表示；同时证明全局 psi_X 单调充分条件被短时渐近排除。
 - [反向风险率导数归约 Provenance](ROBIN_REVERSE_HAZARD_DERIVATIVE_REDUCTION_PROVENANCE.json)
 
+- [Robin (X_c) 密度导数比值 (psi_X=f_X'/F_X) 的精确留数归约与唯一极小点探索](ROBIN_PSI_X_SINGLE_MINIMUM_EXPLORATION.md)：从全区间/右半区精确特征函数导出 (B_i) 留数公式，得到 (psi_X') 的数值候选零点 (0.0144307180068ldots)；当前仅为高精度探索，尚未完成区间唯一性证明。
+- [精确留数探索源码](robin_psi_x_exact_residue_exploration.py)、[输入](robin_psi_x_exact_residue_input.json)、[原生输出摘要](robin_psi_x_exact_residue_output.txt) 与 [Provenance](robin_psi_x_exact_residue_provenance.json)。
+
 附录脚本和原始运行输出在本目录。部分脚本为浮点筛查，不能作为全域证明。后续归档完整性可用 SHA-256 校验：
     
     sha256sum -c FOLLOWUP_SHA256SUMS
