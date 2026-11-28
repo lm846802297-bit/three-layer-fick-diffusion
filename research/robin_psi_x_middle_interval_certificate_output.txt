@@ -1,0 +1,39 @@
+ROBIN_PSI_X_MIDDLE_INTERVAL_CERTIFICATE: PASS
+STATUS: interval-certified
+Benchmark: w1=25/66,D1=25; w2=4/33,D2=1/4; right width=1/2,D=1;kappa=4.
+Interval precision: mpmath 90 decimal digits; mpmath.iv 80 decimal digits.
+Global roots: 82 interval-enclosed roots; interval Sturm-Pruefer node counts are exactly 0,1,...,81.
+Root brackets: half-width 1e-30; each bracket has an interval sign change of the full characteristic determinant.
+Finite exact-residue modes: i=2,...,80 (79 residues).
+Infinite tail starts at i=81.
+
+Neumann bracketing:
+L_opt=9/11; pi^2/L_opt^2 = 14.7434831176766962...
+eta_i >= 14*i^2 for i>=81.
+The lower-bound margin at i=81 is >122.53 and the consecutive difference is >61.66.
+
+Residue bound:
+Lagrange/transfer-matrix bound gives |B_i| <= 6302.600*lambda_(i+1) < 3e4*lambda_(i+1) <= 3e7*i^2 for i>=81.
+Uniform rate upper: lambda_(i+1) <= 100*pi^2*i^2.
+
+Infinite-tail absolute bounds at tau=0.0015:
+T0 < 2.9602445703e-49
+T1 < 1.9185390537e-42
+T2 < 1.2434356124e-35
+F-tail < 3.2200722007e-54
+S_m(tau), m=0,...,11, and the resulting uniform |N_X^(9)| bound are recorded in the full native output.
+
+Taylor-box certificate:
+Degree 8; 426 boxes; maximum width 1.99530516432e-5.
+Uniform |N_X^(9)| bound: 1.5930659364191668e43.
+Maximum Taylor remainder per box: 4.2981809710068048e-8.
+All 426 boxes passed strict negativity.
+sup_{t in [0.0015,0.010]} N_X(t) <= -0.01122850808712529494...
+Accepted conservative result:
+N_X(t) < -0.01122 for every t in [0.0015,0.010].
+
+This certifies psi_X'(t)<0 on [0.0015,0.010], since F_X(t)>0.
+
+Runtime:
+Python 3.13.5; mpmath 1.3.0; NumPy 2.3.5; SciPy 1.17.0.
+Linux 6.18.57 x86_64; 5 visible CPU cores; no GPU used.
