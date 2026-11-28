@@ -1,0 +1,34 @@
+{
+  "benchmark": "static equal-resistance three-layer Robin benchmark, kappa=4",
+  "geometry": {
+    "left_layer_1_width": "25/66",
+    "left_layer_1_diffusivity": "25",
+    "left_layer_2_width": "4/33",
+    "left_layer_2_diffusivity": "1/4",
+    "right_half_width": "1/2",
+    "right_diffusivity": "1",
+    "robin_kappa": "4"
+  },
+  "spectral_root_brackets_source": "research/robin_q30_interval_certificate_output.txt",
+  "spectral_root_wave_number_brackets": {
+    "sqrt_L1": ["3.77267640109840874200470548869422075099999999999999999999999999999999997198", "3.77267640109840874200470568869422075100000000000000000000000000000000001776"],
+    "sqrt_R1": ["4.57785945620680872964282824434745928699999999999999999999999999999999997873", "4.57785945620680872964282844434745928700000000000000000000000000000000006073"],
+    "sqrt_lambda2": ["3.97506264914715939438336797080267273199999999999999999999999999999999998388", "3.97506264914715939438336817080267273200000000000000000000000000000000002965"]
+  },
+  "short_time_window": ["0", "0.0015"],
+  "interval_precision_decimal_digits": 70,
+  "analytic_parameters": {
+    "delta_optical_gap": "2/11",
+    "first_reflection_optical_length": "1/3",
+    "reflection_exponent_alpha": "((1/3)^2-(2/11)^2)/4",
+    "coarse_bounds": {"L1_upper": "14.24", "lambda2_upper": "15.81", "R1_minus_L1_upper": "6.73"}
+  },
+  "acceptance_checks": [
+    "main convolution factor H0 is positive on (0,0.0015]",
+    "t^2 times absolute second derivative of log H0 is below 0.20",
+    "Bromwich contour parameter a=d0^2/(2t) is at least 37",
+    "J_n(a) <= 64/sqrt(a) for n=0,1,2",
+    "reflection ratio and first two derivative bounds are finite and exponentially small",
+    "full log-curvature upper bound is strictly negative"
+  ]
+}
