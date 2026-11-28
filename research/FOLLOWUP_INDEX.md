@@ -47,6 +47,13 @@
 - [Robin 曲率外侧时间区间认证](ROBIN_CURVATURE_SIGN_EXTENSION.md)：以 N=50、70 位区间算术证明 κ=4 基准在 [0.0015,0.010] 严格负曲率，并以首对谱项证明 t≥0.012 严格正曲率；与已有 Q30 中间窗口证书连接后，唯一未关闭区间为 (0,0.0015)。
 - [Q50 外侧区间证书源码](robin_q50_taylor_box_300.py)、[精确输入](robin_q50_taylor_box_300_input.json)、[原生输出](robin_q50_taylor_box_300_output.txt) 与 [Provenance](robin_q50_taylor_box_300_provenance.json)。
 
+- [Robin 曲率全时间唯一零点定理（静态打平、kappa=4）](ROBIN_CURVATURE_GLOBAL_UNIQUE_ZERO_KAPPA4.md)：组合短时反射路径解析界、Q50 负曲率区间、Q30 中间单穿越证书和晚时首对谱项支配，证明 Q_Z 在全时间轴恰好一次由负变正；不推广到其它参数。
+- [全时间唯一零点定理 Provenance](ROBIN_CURVATURE_GLOBAL_UNIQUE_ZERO_KAPPA4_PROVENANCE.json)
+- [Robin 曲率短时间反射路径证书](ROBIN_SHORT_TIME_REFLECTION_CERTIFICATE.md)：在 0<t<=0.0015 以精确双曲传递矩阵和可微 Bromwich 余项证明严格负曲率。
+- [短时反射路径认证源码](robin_short_time_reflection_certificate.py)、[精确输入](robin_short_time_reflection_certificate_input.json)、[原生输出](robin_short_time_reflection_certificate_output.txt) 与 [Provenance](robin_short_time_reflection_certificate_provenance.json)。
+- [Q30 短时负曲率桥](robin_q30_negative_short_bridge.py)：在 [0.0015,0.004] 以 R2–R70 根括区、有限遗漏对项及 Gaussian 谱尾作独立重叠验证；源码、输入、原生输出和 Provenance 同目录归档。
+- [Q50 外侧区间证书](ROBIN_CURVATURE_SIGN_EXTENSION.md)：在 [0.0015,0.010] 证明严格负性，并在 t>=0.012 证明首对谱项严格支配。
+
 附录脚本和原始运行输出在本目录。部分脚本为浮点筛查，不能作为全域证明。后续归档完整性可用 SHA-256 校验：
     
     sha256sum -c FOLLOWUP_SHA256SUMS
