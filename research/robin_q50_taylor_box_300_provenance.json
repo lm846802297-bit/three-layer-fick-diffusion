@@ -40,7 +40,10 @@
   },
   "method": {
     "spectral_cutoff_for_negative_window": 50,
-    "negative_window": ["0.0015", "0.010"],
+    "negative_window": [
+      "0.0015",
+      "0.010"
+    ],
     "negative_window_taylor_boxes": 300,
     "negative_window_tail": "analytic Gaussian double-spectrum bound from |A_j|<=B*j and pi^2*j^2<rho_j<4*pi^2*j^2; finite Gaussian sum plus geometric remainder",
     "late_positive_finite_pair_cutoff": 30,
@@ -59,7 +62,8 @@
     "E_total_at_0.012": "<0.762157"
   },
   "limitations": [
-    "The interval (0,0.0015) remains open for an explicit differentiated short-time remainder bound.",
-    "The global unique-zero theorem is not yet claimed until that short-time interval is connected to the certified negative window."
+    "This certificate alone establishes strict negativity on [0.0015,0.010] and first-pair positivity for t>=0.012.",
+    "The short-time interval (0,0.0015] is established by robin_short_time_reflection_certificate.md; the middle crossing is established by the Q30 C1 certificate.",
+    "The combined full-time unique-zero theorem is specific to the stated kappa=4 static equal-resistance benchmark and does not by itself prove h_T'<h_X' or the final r(t) unimodality theorem."
   ]
 }
