@@ -63,6 +63,9 @@
 - [(psi_X') 晚时间单次穿越区间证书](ROBIN_PSI_X_LATE_SINGLE_CROSSING_CERTIFICATE.md)：70 位区间算术证明 (N_X<0) 于 [0.010,0.0144]、(N_X'>0) 于 [0.0144,0.0145]、(N_X>0) 于 [0.0145,0.020]；首两模支配进一步证明 (N_X>0) 于 (t\ge0.020)。因此 (psi_X') 在 [0.010,(infty)) 恰好一次由负变正；(0,0.010) 仍待短时余项接合。
 - [区间证书源码](robin_psi_x_late_single_crossing_certificate.py)、[精确输入](robin_psi_x_late_single_crossing_certificate_input.json)、[原生输出](robin_psi_x_late_single_crossing_certificate_output.txt) 与 [Provenance](robin_psi_x_late_single_crossing_certificate_provenance.json)。
 
+- [Robin \\(X_c\\) 中间时间区间严格负性证书](ROBIN_PSI_X_MIDDLE_INTERVAL_CERTIFICATE.md)：80 位区间算术、82 个全谱根的区间 Sturm 节点计数、精确留数与解析无限谱尾，证明 \\(N_X(t)<-0.01122\\) 于 \\(0.0015\\le t\\le0.010\\)；与晚时证书连接后，\\(\\psi_X'\\) 在 \\( [0.0015,\\infty)\\) 上恰好一次变号。
+- [中间时间区间证书源码](robin_psi_x_middle_interval_certificate.py)、[精确输入](robin_psi_x_middle_interval_certificate_input.json)、[原生输出](robin_psi_x_middle_interval_certificate_output.txt) 与 [Provenance](robin_psi_x_middle_interval_certificate_provenance.json)。
+
 附录脚本和原始运行输出在本目录。部分脚本为浮点筛查，不能作为全域证明。后续归档完整性可用 SHA-256 校验：
     
     sha256sum -c FOLLOWUP_SHA256SUMS
