@@ -404,3 +404,138 @@ h_T'(t)<h_X'(t),
 然后再接入完整 \((\log r)''\)。
 
 本轮没有重新计算谱根或进行数值扫描；所有小时间、晚时间留数和既有谱证书均直接沿用。
+
+
+## 9. Score-renewal 方程与曲率权重的历史输运
+
+本节继续使用
+\[
+x f_Z(x)=(g_Z*f_Z)(x),
+\qquad
+g_Z(x)=x\Pi_Z(x).
+\]
+对固定 \(x>0\)，定义后验随机变量 \(Y_x\)：
+\[
+\boxed{
+\Pr(Y_x\in dy)
+=
+\frac{g_Z(y)f_Z(x-y)}
+{x f_Z(x)}\,\mathbf1_{(0,x)}(y)\,dy.
+}
+\tag{9.1}
+\]
+更新方程保证它是概率密度。令 \(V_x=x-Y_x\)，并记
+\[
+\ell_Z(x)=(\log f_Z(x))'.
+\]
+
+由于 Robin 正光学间隙给出 \(f_Z(0+)=0\)，且 \(g_Z\) 在原点局部可积，对卷积恒等式求导可得
+\[
+\frac{(g_Z*f_Z)'(x)}{(g_Z*f_Z)(x)}
+=
+\mathbb E[\ell_Z(V_x)].
+\]
+另一方面 \(g_Z*f_Z=x f_Z\)，故
+\[
+\boxed{
+\ell_Z(x)+\frac1x
+=
+\mathbb E[\ell_Z(V_x)].
+}
+\tag{9.2}
+\]
+
+对 (9.2) 关于 \(x\) 求导。后验密度 (9.1) 的对数导数为
+\[
+\partial_x\log p_x(y)
+=
+\ell_Z(x-y)-\ell_Z(x)-\frac1x,
+\]
+其均值为零。于是
+\[
+\frac{d}{dx}\mathbb E[\ell_Z(V_x)]
+=
+\mathbb E[\ell_Z'(V_x)]
++
+\operatorname{Var}(\ell_Z(V_x)).
+\]
+得到精确 score-renewal 恒等式
+\[
+\boxed{
+(\log f_Z)''(x)
+=
+\mathbb E[(\log f_Z)''(V_x)]
++
+\operatorname{Var}(\ell_Z(V_x))
++\frac1{x^2}.
+}
+\tag{9.3}
+\]
+在当前 Robin 小时间鞍点渐近下，后验 score 的一阶、二阶矩在每个固定 \(x>0\) 有限，因此上述微分与交换积分合法。
+
+### 9.1 将曲率权重向早时间输运
+
+把 (9.3) 乘以 \(W_t(x)\)，在 \(0<x<t\) 积分。定义
+\[
+\boxed{
+\widetilde W_t(v)
+=
+f_Z(v)\int_v^t
+\frac{W_t(x)g_Z(x-v)}
+{x f_Z(x)}\,dx.
+}
+\tag{9.4}
+\]
+由 Fubini 定理，
+\[
+\boxed{
+\begin{aligned}
+\int_0^t W_t(x)(\log f_Z)''(x)\,dx
+={}&
+\int_0^t\widetilde W_t(v)(\log f_Z)''(v)\,dv\\
+&+
+\int_0^tW_t(x)
+\left[
+\operatorname{Var}(\ell_Z(V_x))+\frac1{x^2}
+\right]dx.
+\end{aligned}
+}
+\tag{9.5}
+\]
+并且
+\[
+\boxed{
+\int_0^t\widetilde W_t(v)\,dv
+=
+\int_0^tW_t(x)\,dx.
+}
+\tag{9.6}
+\]
+其概率解释是：先按 \(W_t(x)\,dx\) 选择当前时间 \(x\)，再按更新后验选择 \(V_x=x-Y_x\)。由于 \(0<V_x<x\)，归一化后的 \(\widetilde W_t\) 相对于 \(W_t\) 严格向早时间输运；特别地，对任意递增函数 \(\psi\)，
+\[
+\frac{\int_0^t\widetilde W_t(v)\psi(v)\,dv}
+{\int_0^tW_t(x)\,dx}
+\le
+\frac{\int_0^tW_t(x)\psi(x)\,dx}
+{\int_0^tW_t(x)\,dx}.
+\tag{9.7}
+\]
+
+式 (9.5) 把原曲率积分拆成历史曲率的输运贡献与两个严格正的更新补偿项。它没有单独给出目标不等式的符号，因为 \((\log f_Z)''\) 并非全局递增；其用途是将晚时正曲率如何由早时负曲率及更新方差补偿，转化为一个具有显式后验核的比较问题。
+
+## 10. 当前证明状态
+
+已得到的精确对象为：
+
+1. 原加权曲率积分等于 \(h_T'(t)\)；
+2. \(Z_c\) 的 Lévy 更新核 \(g_Z=x\Pi_Z\)；
+3. 两个累计核满足 \(g_T=g_X+g_Z\)；
+4. 更新核由半谱计数差 \(m(u)=N_R-N_L\) 决定；
+5. score 满足历史更新恒等式 (9.3)；
+6. 单峰权重 \(W_t\) 在更新后验下输运为同质量、偏向早时间的 \(\widetilde W_t\)。
+
+仍需证明的是更新后验所产生的正方差补偿，如何与 \(\widetilde W_t\) 对早时负曲率的加权作用共同给出
+\[
+h_X'(t)-h_T'(t)>0
+\]
+的中间时间统一下界。本节不将该比较写成已证明结论。
