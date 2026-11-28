@@ -34,6 +34,8 @@
 - [条件 CDF 差的概率解释与峰值位置两端渐近](CONDITIONAL_CDF_GAP_PEAK_ASYMPTOTICS.md)：将单峰权重解释为两个条件分布的 CDF 差，得到峰值位置的光学小时间极限与指数倾斜晚时间极限，并证明目标方差不等式在两端时间区间成立。
 - [Robin 延迟谱乘积的 Lévy 表示与 bell-shaped 判据：静态打平基准的反例](ROBIN_DELAY_LEVY_BELLSHAPE_REDUCTION.md)：建立完全单调 Lévy 表示，并用 k=12 的区间谱证书证明当前静态打平基准不满足 Kwaśnicki–Simon 条件；因此 f_Z 不是 bell-shaped，原先相邻谱间距有限化论证撤回。
 - [第 12 级 bell-shape 反例的区间证书](robin_bellshape_level12_obstruction.py)：认证 sqrt(L21)>sqrt(R33) 与 sqrt(L22)<sqrt(R34)，并保存精确输入、原生输出和 provenance。
+- [Robin 曲率的高阶谱项聚合控制](ROBIN_CURVATURE_AGGREGATE_SPECTRAL_TAIL.md)：对当前均匀右半基准证明留数 O(j) 增长界，导出双谱曲率级数的显式 Gaussian C1 尾界，并以高频传递矩阵解释小时间的集体抵消。
+- [聚合谱尾推导 provenance](ROBIN_CURVATURE_AGGREGATE_SPECTRAL_TAIL_PROVENANCE.json)
 - [Robin 延迟密度 score 唯一极小点：双谱留数与变差障碍](ROBIN_SCORE_CURVATURE_SINGLE_MINIMUM.md)：将 score 曲率写成两两谱率和的有符号指数级数，证明留数符号在严格光学间隙下无限次改变，并给出单变差 Laplace 判据及其适用障碍。
 - [score 曲率推导 provenance](ROBIN_SCORE_CURVATURE_SINGLE_MINIMUM_PROVENANCE.json)
 - [Robin 谱更新核与反向风险率导数比较](ROBIN_SPECTRAL_RENEWAL_KERNEL_AND_REVERSE_HAZARD_COMPARISON.md)：将曲率积分化为 h_T'，建立 Robin 更新核的加法分解、score-renewal 历史输运，并给出中间时间的单峰权重曲率竞争判据。
