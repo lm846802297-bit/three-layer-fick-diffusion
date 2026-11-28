@@ -3,7 +3,7 @@
   "branch": "research/two-parameter-spectral-bridge-2026-11-27",
   "artifact": {
     "path": "research/ROBIN_CURVATURE_SIGN_EXTENSION.md",
-    "sha256": "010bb221852d8a470d7f9b28df0f0266681af106d660cd9cf56b1417ec6490cd"
+    "sha256": "b2d9f763c14cf982af5205feb2672cdf527a4493fa07c4d7938645da0b9fac87"
   },
   "source": {
     "path": "research/robin_q50_taylor_box_300.py",
