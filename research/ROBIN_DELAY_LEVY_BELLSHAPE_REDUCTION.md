@@ -232,7 +232,7 @@ K_0=
 |\widehat\nu_c(i\xi)|
 \le C e^{-(\ell_R-\ell_L)\sqrt{|\xi|/2}}
 \]
-（大 \(|\xi|\)），则 \(\Phi\) 的任意多项式加权均可积，Fourier 反演给出 \(f_Z\in C^\infty(\mathbb R)\)。因此 Kwaśnicki–Simon 判据推出
+（大 \(|\xi|\)），则 \(\Phi\) 的任意多项式加权均可积，Fourier 反演给出 \(f_Z\in C^\infty(\mathbb R)\)。已有小时间鞍点渐近给出 \(f_Z'(z)>0\) 对充分小的 \(z>0\) 成立；最慢极点 \(-\rho_2\) 的正留数给出 \(f_Z'(z)<0\) 对充分大的 \(z\) 成立，而 \(f_Z=0\) 于负半轴。因此定理所需的端部单调性与衰减条件也满足。于是 Kwaśnicki–Simon 判据推出
 \[
 \boxed{f_Z\text{ 是严格 bell-shaped 密度。}}
 \]
