@@ -3,7 +3,8 @@
   "branch": "research/two-parameter-spectral-bridge-2026-11-27",
   "artifact": {
     "path": "research/ROBIN_REVERSE_HAZARD_DERIVATIVE_REDUCTION.md",
-    "sha256": "b6c49f8e8ed92a0a4b62cf80a4e62c0dd9b49e6a3c8d7f4a1fbe9e6c6e5c4d8a"
+    "git_blob_sha1": "a8d1a6a932ce0330f938c6f9c61c490b3a876400",
+    "hash_note": "GitHub blob SHA-1 identifies the exact archived analytic note. No numerical source or input dataset was generated in this derivation."
   },
   "method": "Analytic derivation only; no new spectral roots, numerical scans, or numerical certificate were produced.",
   "assumptions": [
