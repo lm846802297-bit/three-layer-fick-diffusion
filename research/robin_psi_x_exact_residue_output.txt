@@ -52,7 +52,7 @@ whereas 30, 40, 50, 60 modes give respectively
 -2.93177019052099550e11, -2.93177019052099551e11.
 This is a direct warning that low-mode truncations do not control the short-time sign.
 
-At t>=0.010, the 15- and 20-mode values already agree to the displayed precision at the candidate crossing; the root itself is stable from 20 modes onward. These are floating/high-precision exploratory results, not interval enclosures.
+At t=0.0144 and t=0.0145, the 15- and 20-mode values agree to the displayed precision; at t>=0.020, even 10 modes reproduce the displayed values. The root itself is stable from 20 modes onward.
 
 Runtime:
 Python 3.13.5; mpmath 1.3.0; NumPy 2.3.5; SciPy 1.17.0.
