@@ -38,7 +38,8 @@
     "The sufficient condition psi_X'>=0 globally is ruled out by the short-time asymptotic and late-time pole asymptotic",
     "The origin weight w_t(u) has O(u^(3/2) exp(-d_X^2/(4u))) decay, making the weighted psi_X' integral convergent",
     "Short-time asymptotic: h_X'(t)-h_T'(t)=9/(121 t^3)+O(t^-2)>0 for sufficiently small t, from d_X=7/22 and d_T=1/2.",
-    "Correction: the full Robin transfer determinant gives f_X(t) ~ C_X t^(-5/2) exp(-d_X^2/(4t)); hence F_X(t) ~ const*t^(-1/2) exp(-d_X^2/(4t)) and the conditional weight w_t(u)=O(u^(3/2) exp(-d_X^2/(4u))). The leading psi_X' asymptotic remains -d_X^4/(4t^5)."
+    "Correction: the full Robin transfer determinant gives f_X(t) ~ C_X t^(-5/2) exp(-d_X^2/(4t)); hence F_X(t) ~ const*t^(-1/2) exp(-d_X^2/(4t)) and the conditional weight w_t(u)=O(u^(3/2) exp(-d_X^2/(4u))). The leading psi_X' asymptotic remains -d_X^4/(4t^5).",
+    "Corrected short-time X_c prefactor: f_X(t)~C_X t^(-5/2) exp(-d_X^2/(4t)), F_X(t)~const*t^(-1/2) exp(-d_X^2/(4t)); hence w_t(u)=O(u^(3/2) exp(-d_X^2/(4u))). The leading psi_X' asymptotic remains -d_X^4/(4t^5)."
   ],
   "open_items": [
     "Certify that psi_X' is negative only on an initial interval and nonnegative thereafter, with a rigorous enclosure of its sign-change point u_0.",
