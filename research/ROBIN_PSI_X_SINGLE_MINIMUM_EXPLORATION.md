@@ -120,7 +120,20 @@ f_X(t)=\sum_{i\ge2}B_i e^{-\eta_i t},
 F_X(t)=1-\sum_{i\ge2}\frac{B_i}{\eta_i}e^{-\eta_i t}.
 \tag{2.5}
 \]
-对任意 \(t>0\)，该谱级数及其固定阶导数正常收敛。
+由全区间 Sturm–Liouville 的 Lagrange 恒等式，在全谱根 \(\lambda_n=k_n^2\) 处有
+\[
+|P_G'(-\lambda_n)|
+=\frac{\int_0^1 y_n(x)^2\,dx}{24|y_n(1)|}.
+\]
+对缩放状态 \((y,p/k)\)，每层传递矩阵在高频下具有一致有界的矩阵范数，故 \(|y_n(1)|\le C\)。而第一层内
+\[
+y_n(x)=\cos(k_nx/5)+\frac{\kappa}{5k_n}\sin(k_nx/5),
+\]
+所以 \(\int_0^1y_n^2dx\ge c_0>0\) 对充分大的 \(n\) 成立。于是 \(|P_G'(-\lambda_n)|\ge c_1>0\)。代入 (2.2)，并使用 \(\lambda_n=O(n^2)\)，得到多项式留数界
+\[
+|B_i|\le C_2 i^2.
+\]
+因此 (2.5) 的留数级数及其任意固定阶时间导数在每个 \(t\ge\tau>0\) 上正常收敛。
 
 ## 3. 两端符号已由解析渐近确定
 
