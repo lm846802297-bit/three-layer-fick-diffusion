@@ -4,16 +4,16 @@
   "base_commit": "a0dcc9544bbdd3a1d8a6c9a3129915d830e8ae5a",
   "artifact": {
     "path": "research/ROBIN_SCORE_CURVATURE_SINGLE_MINIMUM.md",
-    "sha256": "9b5a9df8d1cc5db3aba622a5e85d8a249a73e8e7c5028f8b71c62ee4d8d4d629"
+    "sha256": "8f2c0601c0013e4ebf60efa08fff40beaeb832143af146e5d67071463609c488"
   },
   "inputs": [
     {
       "path": "research/ZC_DENSITY_CURVATURE.md",
-      "sha256": "5bd96980a44052047cc6ec4d34083b9b4d50dbc98ed4c7e8806649cad193f929"
+      "sha256": "c67474851fc89d1ca1222785ced4567b8ed71923e73eeb681fe78408289d5922"
     },
     {
       "path": "research/ROBIN_SPECTRAL_RENEWAL_KERNEL_AND_REVERSE_HAZARD_COMPARISON.md",
-      "sha256": "c27a08885db00688a1556e103b69ce292f179a2601debee7aebaf7f14c289410"
+      "sha256": "01ac78f402699a59bb69494311cd730c518452f1fa4233767796d5910c7a77be"
     }
   ],
   "method": "Analytic derivation: inverse-Laplace residue expansion, pairwise symmetrization of f f''-(f')^2, exact residue-sign counting, and Weyl counting at the right half-spectrum poles.",
