@@ -129,7 +129,7 @@ m(u),&u>0,\\
 \[
 \int_{-1}^1\operatorname{Re}\Phi(\xi)\,d\xi<\infty,
 \qquad
-\lim_{\xi\to0}\xi\operatorname{Im}\Phi(\xi)=0.
+\lim_{\xi\to0}\operatorname{Im}\Phi(\xi)=0.
 \]
 可积条件由 (2.2) 给出。
 
