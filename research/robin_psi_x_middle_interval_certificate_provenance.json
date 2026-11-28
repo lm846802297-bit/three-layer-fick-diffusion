@@ -1,0 +1,58 @@
+{
+  "repository": "lm846802297-bit/three-layer-fick-diffusion",
+  "branch": "research/two-parameter-spectral-bridge-2026-11-27",
+  "artifact": {
+    "path": "research/ROBIN_PSI_X_MIDDLE_INTERVAL_CERTIFICATE.md",
+    "sha256": "7d7d30158fd834860bee0c9e13c03dd8a434a9aaf70d2d34f762896fa12a0816"
+  },
+  "source": {
+    "path": "research/robin_psi_x_middle_interval_certificate.py",
+    "sha256": "130cd56b23eb152c2c9c7661b8855cd0ede439d6194febbfdcbe451fc2f1ee19"
+  },
+  "input": {
+    "path": "research/robin_psi_x_middle_interval_certificate_input.json",
+    "sha256": "634e98d5fc321d20525640a010f1c9a96702705c9b4d1f87be5a98a4a7032a30"
+  },
+  "native_output": {
+    "path": "research/robin_psi_x_middle_interval_certificate_output.txt",
+    "sha256": "4fb2a356cd41b5c82dc490420cf5ea5784a33be7c6f78c74962e0b56519b2f8f"
+  },
+  "method": "70+ digit interval transfer matrices and characteristic derivatives; interval Sturm-Pruefer node counts for the first 82 global roots; exact characteristic-function residues for modes i=2,...,80; Neumann-bracketing eigenvalue lower bounds and Lagrange-identity residue growth bounds for the infinite tail; degree-8 centered Taylor enclosures for N_X on 426 time boxes.",
+  "runtime": {
+    "python": "3.13.5",
+    "mpmath": "1.3.0",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "architecture": "x86_64",
+    "visible_cpu_count": 5,
+    "gpu": "not used",
+    "mpmath_decimal_digits": 90,
+    "interval_decimal_digits": 80
+  },
+  "certified_results": {
+    "time_interval": ["0.0015", "0.010"],
+    "finite_residue_indices": [2, 80],
+    "global_roots_enclosed": 82,
+    "interval_sturm_node_counts": "0,1,...,81",
+    "time_boxes": 426,
+    "taylor_degree": 8,
+    "uniform_abs_N9_bound": "1.5930659364191668251644082240863339579700295e43",
+    "maximum_box_taylor_remainder": "4.2981809710068047542275576291657659949218611e-8",
+    "sup_N_X_upper_bound": "-0.0112285080871252949448240269222329073936077089463144980173670312",
+    "accepted_uniform_bound": "N_X(t)<-0.01122 on [0.0015,0.010]",
+    "tail_bounds_at_tau_0_0015": {
+      "f_tail_abs": "<2.961e-49",
+      "fprime_tail_abs": "<1.919e-42",
+      "fsecond_tail_abs": "<1.244e-35",
+      "F_tail_abs": "<3.221e-54"
+    }
+  },
+  "assumptions_and_dependencies": [
+    "The first right-half root R1 is reused from the existing certified Q30 root bracket.",
+    "The full operator is the fixed static equal-resistance three-layer Robin benchmark with kappa=4.",
+    "Neumann bracketing is applied after releasing interface continuity and dropping the positive Robin boundary terms.",
+    "The residue-growth bound uses the exact characteristic-function residue formula and the Lagrange norm identity."
+  ],
+  "scope": "This certificate proves N_X<0 only on [0.0015,0.010]. Combined with the existing late-time certificate, psi_X' has exactly one sign change on [0.0015,infinity). It does not cover (0,0.0015)."
+}
