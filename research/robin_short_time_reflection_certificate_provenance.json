@@ -3,11 +3,11 @@
   "branch": "research/two-parameter-spectral-bridge-2026-11-27",
   "artifact": {
     "path": "research/ROBIN_SHORT_TIME_REFLECTION_CERTIFICATE.md",
-    "sha256": "e4f48c9a7b01d6d781bfdb1c3b98fc331bddaf392a09bde5703e964e87144048"
+    "sha256": "e83aa8f1344a39816b96747ec2c4d94f58c77e2e264b29c5a9236f0ad68eec85"
   },
   "source": {
     "path": "research/robin_short_time_reflection_certificate.py",
-    "sha256": "f796313aa961f1ebf5adc3c6342b6a601adf624694ae3e1bba3327e5718994d7"
+    "sha256": "b02da68df546f9227bd1202231e2e643dfdfa770a4a80bd8aa022bfc40a92559"
   },
   "input": {
     "path": "research/robin_short_time_reflection_certificate_input.json",
@@ -15,7 +15,7 @@
   },
   "native_output": {
     "path": "research/robin_short_time_reflection_certificate_output.txt",
-    "sha256": "ebb51ad58e75ad9ccbf03201974d78d32078b946e920983cc0ae45af536bc50e"
+    "sha256": "38f5b5052188bc3d9533f4ce3975a4714c05355e399bf6e92cc0fd3c3326d0a5"
   },
   "dependencies": [
     {
