@@ -1,0 +1,29 @@
+{
+  "repository": "lm846802297-bit/three-layer-fick-diffusion",
+  "branch": "research/two-parameter-spectral-bridge-2026-11-27",
+  "base_commit": "231aa948acad31e9375a8bbb09c771f05c57fc94",
+  "source": {
+    "path": "research/robin_bellshape_level12_obstruction.py",
+    "sha256": "6d2bece8f925f5c8d1b5bf82be67f7a057da42ac5daf211c006f3b5c1ae2b5dd"
+  },
+  "input": {
+    "path": "research/robin_bellshape_level12_obstruction_input.json",
+    "sha256": "81cbbad759b2a9d12f27a4b093bc88a1d5dfb9800764d0ce427ff27fdf77e4f1"
+  },
+  "native_output": {
+    "path": "research/robin_bellshape_level12_obstruction_output.txt",
+    "sha256": "d9bb0ef75ab318177b848ad42a2358654a9f0e311336d653f2d68345d8d3efe8"
+  },
+  "runtime": {
+    "python": "3.13.5",
+    "mpmath": "1.3.0",
+    "os": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "cpu": "AMD EPYC 9V74, 5 vCPU exposed by KVM",
+    "interval_precision_decimal_digits": 60
+  },
+  "validation": {
+    "primary": "mpmath.iv interval sign brackets for phase residuals and spectral gaps",
+    "independent": "direct transfer-matrix characteristic signs at all eight bracket endpoints",
+    "result": "PASS: d_21,12 > 0 and d_22,12 < 0"
+  }
+}
