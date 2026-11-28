@@ -3,19 +3,23 @@
   "branch": "research/two-parameter-spectral-bridge-2026-11-27",
   "artifact": {
     "path": "research/ROBIN_PSI_X_SINGLE_MINIMUM_EXPLORATION.md",
-    "status": "analytic derivation plus exploratory numerical evidence; no interval theorem claimed"
+    "status": "analytic derivation plus exploratory numerical evidence; no interval theorem claimed",
+    "git_blob_sha1": "4712143c0e417afaa53404cd5c64bd00847195b0"
   },
   "source": {
     "path": "research/robin_psi_x_exact_residue_exploration.py",
-    "sha256": "6fd5ee20f2c77e05281d4e51251d1a32953bc58cab8102cf89fe6a0b3aad72cd"
+    "sha256": "6fd5ee20f2c77e05281d4e51251d1a32953bc58cab8102cf89fe6a0b3aad72cd",
+    "git_blob_sha1": "f1c87af02edb600f89f7c1ebb13d73df995b023b"
   },
   "input": {
     "path": "research/robin_psi_x_exact_residue_input.json",
-    "sha256": "72d7ad7078bab2cb9796a964908b7f9b8a8d8a27ae6e851bc1d25beaba0556a2"
+    "sha256": "72d7ad7078bab2cb9796a964908b7f9b8a8d8a27ae6e851bc1d25beaba0556a2",
+    "git_blob_sha1": "b5a822a3a26efe04eb9d1bc195a62a281ff534ee"
   },
   "native_output_summary": {
     "path": "research/robin_psi_x_exact_residue_output.txt",
-    "sha256": "57d09211b015aa0e0f7a7e0cefbd37a81049ae3830f4d67447cc9a753be2cbd5"
+    "sha256": "5a4074a2015bcae414ade3b1ba4941a54f9d68b80440966d662f4ba0da63f0e9",
+    "git_blob_sha1": "2f3506700132a1730fd385b5f109a7cd91cb6f8f"
   },
   "method": "Numerically isolate global and right-half characteristic roots with SciPy bracketing, refine roots to 60 decimal digits with mpmath, evaluate exact residues from the normalized full/right characteristic functions and their derivatives, then inspect psi_X' and mode-truncation stability.",
   "runtime": {
