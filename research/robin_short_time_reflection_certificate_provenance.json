@@ -11,7 +11,7 @@
   },
   "input": {
     "path": "research/robin_short_time_reflection_certificate_input.json",
-    "sha256": "d17d7b54cc1ddb8b9bddd4cae46c9ce1d3d836abf66577994e9b64941bbf0876"
+    "sha256": "d28514786e904bb487d755996cbbcad7e0a9924f05564076d55940aebcd0c218"
   },
   "native_output": {
     "path": "research/robin_short_time_reflection_certificate_output.txt",
