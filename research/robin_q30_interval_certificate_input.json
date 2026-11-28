@@ -1,0 +1,37 @@
+{
+  "benchmark": "static equal-resistance Robin benchmark, kappa=4",
+  "geometry": {
+    "left_layer_1_width": "25/66",
+    "left_layer_1_diffusivity": "25",
+    "left_layer_2_width": "4/33",
+    "left_layer_2_diffusivity": "1/4",
+    "right_half_width": "1/2",
+    "right_diffusivity": "1",
+    "robin_kappa": "4"
+  },
+  "spectral_definitions": {
+    "L_j": "left half Robin-Dirichlet eigenvalues",
+    "R_j": "right half Robin-Dirichlet eigenvalues",
+    "c": "global second Robin eigenvalue lambda_2",
+    "rho_j": "R_j-c",
+    "sigma_j": "L_j-c"
+  },
+  "finite_spectral_cutoff": 30,
+  "certified_time_window": ["0.010", "0.012"],
+  "narrow_zero_bracket": ["0.01102", "0.01103"],
+  "time_subintervals_for_QN_derivative": 2000,
+  "interval_precision_decimal_digits": 70,
+  "root_bracket_radius": "1e-25",
+  "gaussian_tail": {
+    "tail_start_index": 31,
+    "finite_sum_upper_index": 160,
+    "orders": [0, 1, 2, 3]
+  },
+  "validation": [
+    "interval sign brackets for L1, R1, global lambda_2, and R2 through R30",
+    "monotone Prüfer phase for the first left root and right-root phase cells for mode indexing",
+    "interval evaluation of Q30 at window endpoints and narrow root bracket endpoints",
+    "interval lower bound for Q30 prime on 2000 time subintervals",
+    "analytic residue growth bound and Gaussian C1 tail bounds for all omitted modes"
+  ]
+}
