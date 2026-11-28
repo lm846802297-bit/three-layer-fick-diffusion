@@ -1,0 +1,42 @@
+{
+  "benchmark": "static equal-resistance Robin benchmark, kappa=4",
+  "geometry": {
+    "left_layer_1_width": "25/66",
+    "left_layer_1_diffusivity": "25",
+    "left_layer_2_width": "4/33",
+    "left_layer_2_diffusivity": "1/4",
+    "right_half_width": "1/2",
+    "right_diffusivity": "1",
+    "robin_kappa": "4"
+  },
+  "spectral_definitions": {
+    "L_j": "left half Robin-Dirichlet eigenvalues",
+    "R_j": "right half Robin-Dirichlet eigenvalues",
+    "c": "global second Robin eigenvalue lambda_2",
+    "rho_j": "R_j-c"
+  },
+  "negative_window": {
+    "finite_spectral_cutoff": 50,
+    "time_window": ["0.0015", "0.010"],
+    "Taylor_boxes": 300,
+    "tail_orders": [0, 2],
+    "tail_sum_upper_index": "max(200,N+201)"
+  },
+  "late_positive_window": {
+    "first_pair": [2, 3],
+    "finite_pair_cutoff": 30,
+    "time_threshold": "0.012",
+    "tail_orders": [0, 2]
+  },
+  "interval_precision_decimal_digits": 70,
+  "root_bracket_radius": "1e-25",
+  "validation": [
+    "interval sign brackets for L1, R1, global lambda_2 and R2 through R50",
+    "Pruefer phase indexing of the first left root and right roots",
+    "check c<5*pi^2 and pi^2*j^2<rho_j for all computed modes",
+    "check |A_j|<B*j for j=2,...,50",
+    "second-derivative Taylor upper bound on each of 300 boxes",
+    "Gaussian double-spectrum tail bound for all pairs with max index greater than 50",
+    "first-pair dominance ratio including all pairs beyond cutoff 30"
+  ]
+}
