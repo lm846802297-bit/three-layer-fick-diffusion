@@ -1,0 +1,65 @@
+{
+  "repository": "lm846802297-bit/three-layer-fick-diffusion",
+  "branch": "research/two-parameter-spectral-bridge-2026-11-27",
+  "artifact": {
+    "path": "research/ROBIN_CURVATURE_SIGN_EXTENSION.md",
+    "sha256": "010bb221852d8a470d7f9b28df0f0266681af106d660cd9cf56b1417ec6490cd"
+  },
+  "source": {
+    "path": "research/robin_q50_taylor_box_300.py",
+    "sha256": "0e32892fdea2f2fd3d4ed648030b113e57fbb25e9e313ae2d59b9f87d1427078"
+  },
+  "input": {
+    "path": "research/robin_q50_taylor_box_300_input.json",
+    "sha256": "d1815bce8c5b66d1e576d532fe8ac31fae1cd4e0a5e1adf670b2b9d3dc7e4e55"
+  },
+  "native_output": {
+    "path": "research/robin_q50_taylor_box_300_output.txt",
+    "sha256": "a01cf833953e04f357f329ed3847ce1e4f74577894ad959ab10cfd7397d461d9"
+  },
+  "dependencies": [
+    {
+      "path": "research/robin_q30_interval_certificate.py",
+      "sha256": "00c3d30064f9826ca3bdaeca7eb3c3bb448d20a1d705bb515cac523fcca47180",
+      "role": "previously archived interval root and residue certificate; reused formulas and benchmark normalization"
+    },
+    {
+      "path": "research/robin_q30_interval_certificate_output.txt",
+      "sha256": "cc8340c42bcc5291259c0d64a62887d7d98f1ce002bd9e73fb7669fb72822a06",
+      "role": "previously archived middle-window Q30 certificate"
+    }
+  ],
+  "runtime": {
+    "python": "3.13.5",
+    "mpmath": "1.3.0",
+    "interval_precision_decimal_digits": 70,
+    "os": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "architecture": "x86_64",
+    "exposed_cpus": 5,
+    "processor": "not exposed by runtime"
+  },
+  "method": {
+    "spectral_cutoff_for_negative_window": 50,
+    "negative_window": ["0.0015", "0.010"],
+    "negative_window_taylor_boxes": 300,
+    "negative_window_tail": "analytic Gaussian double-spectrum bound from |A_j|<=B*j and pi^2*j^2<rho_j<4*pi^2*j^2; finite Gaussian sum plus geometric remainder",
+    "late_positive_finite_pair_cutoff": 30,
+    "late_positive_threshold": "0.012",
+    "late_positive_tail": "same analytic double-spectrum bound, normalized by C23 and exp(lambda23*tau)"
+  },
+  "certified_results": {
+    "B_upper": "265.424329828643",
+    "Q50_taylor_box_global_upper": "-5517850.2501393209324517332842",
+    "sup_abs_Q_minus_Q50_for_t_ge_0.0015": "<61.579377295393",
+    "QZ_upper_on_0.0015_to_0.010": "<-5517788.6707620255",
+    "C23": "[448153309.5622244431724363342474680,448153309.5622244431724415657296065]",
+    "lambda23": "[334.0988836217912434003415928417834,334.0988836217912434003416065683525]",
+    "E_finite_pairs_through_30_at_0.012": "[0.7621564753126098391357796152496846,0.7621564753126098391357975617050332]",
+    "E_tail_pairs_above_30_at_0.012": "<9.3441e-41",
+    "E_total_at_0.012": "<0.762157"
+  },
+  "limitations": [
+    "The interval (0,0.0015) remains open for an explicit differentiated short-time remainder bound.",
+    "The global unique-zero theorem is not yet claimed until that short-time interval is connected to the certified negative window."
+  ]
+}
