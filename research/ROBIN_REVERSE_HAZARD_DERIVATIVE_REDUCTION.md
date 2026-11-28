@@ -48,8 +48,9 @@ h_X'-h_T'
 
 令 \(d_X=\ell_L=7/22\)。短时高频反演给出
 \[
-f_X(t)\sim C_Xt^{-3/2}e^{-d_X^2/(4t)},\qquad
-F_X(t)\sim\frac{4t^2}{d_X^2}f_X(t).
+f_X(t)\sim C_Xt^{-5/2}e^{-d_X^2/(4t)},\qquad
+F_X(t)\sim\frac{4t^2}{d_X^2}f_X(t)
+\sim\frac{4C_X}{d_X^2}t^{-1/2}e^{-d_X^2/(4t)}.
 \]
 所以
 \[
@@ -118,12 +119,12 @@ h_X'-h_T'
 
 固定 \(t>0\)，由 \(f_Z(t-u)=f_Z(t)+O(u)\) 和
 \[
-F_X(u)\asymp u^{1/2}e^{-d_X^2/(4u)}
+F_X(u)\asymp u^{-1/2}e^{-d_X^2/(4u)}
 \]
 得到
 \[
 \boxed{
-w_t(u)=O\left(u^{5/2}e^{-d_X^2/(4u)}\right),
+w_t(u)=O\left(u^{3/2}e^{-d_X^2/(4u)}\right),
 \quad u\downarrow0.
 }
 \]
@@ -217,20 +218,21 @@ h_X'(t)-h_T'(t)
 
 ### 7.2 当前验收状态
 
-\(\psi_X'\) 的晚时间单次穿越已经由独立区间证书部分关闭：
+\(\psi_X'\) 的中间—晚时间符号已由两份独立区间证书闭合：
 \[
 \begin{aligned}
-\psi_X'(t)&<0 &&(0.010\le t\le0.0144),\\
+\psi_X'(t)&<0 &&(0.0015\le t\le0.0144),\\
 \psi_X'(t)&>0 &&(t\ge0.0145),
 \end{aligned}
 \]
-且在 \([0.0144,0.0145]\) 内严格单次穿越。证明见
+且在 \([0.0144,0.0145]\) 内严格单次穿越。证明分别见
+`ROBIN_PSI_X_MIDDLE_INTERVAL_CERTIFICATE.md` 和
 `ROBIN_PSI_X_LATE_SINGLE_CROSSING_CERTIFICATE.md`。
 
-因此，唯一尚未完成的是
+唯一尚未完成的是
 \[
-\boxed{0<t<0.010}
+\boxed{0<t<0.0015}
 \]
-上的严格负性，以及它与短时反射渐近的显式接合。候选 \(\varepsilon=0.035\) 和标量裕量 \(\mathcal D(\varepsilon)\) 仍未认证；在短时符号接合完成后，再进行该有限积分验收。
+上的严格负性，以及 \(X_c\) 短时反射渐近的显式余项接合。候选 \(\varepsilon=0.035\) 和标量裕量 \(\mathcal D(\varepsilon)\) 仍未认证；在短时符号接合完成后，再进行该有限积分验收。
 
 达到这两项后，才可将 \(\psi_X'\) 的全时间单次变号性质用于 \(\mathcal D(\varepsilon)\) 判据。
