@@ -2,19 +2,23 @@
   "repository": "lm846802297-bit/three-layer-fick-diffusion",
   "branch": "research/two-parameter-spectral-bridge-2026-11-27",
   "artifact": {
-    "path": "research/ROBIN_PSI_X_LATE_SINGLE_CROSSING_CERTIFICATE.md"
+    "path": "research/ROBIN_PSI_X_LATE_SINGLE_CROSSING_CERTIFICATE.md",
+    "git_blob_sha1": "480d1b5f46a94bc56bbb8514424dab40135cbe1f"
   },
   "source": {
     "path": "research/robin_psi_x_late_single_crossing_certificate.py",
-    "sha256": "e5b981fde0958f6a30b8b68dfea98da875e0c2d6f4c553a758ad72f1cba603a1"
+    "sha256": "e5b981fde0958f6a30b8b68dfea98da875e0c2d6f4c553a758ad72f1cba603a1",
+    "git_blob_sha1": "af9877c395be99c59d51c0aaf88a0dc4fab4bfd2"
   },
   "input": {
     "path": "research/robin_psi_x_late_single_crossing_certificate_input.json",
-    "sha256": "7f9a3dbced739b524fd7076854ab8089bc48a0285b41d02d15f9833df370d8ee"
+    "sha256": "7f9a3dbced739b524fd7076854ab8089bc48a0285b41d02d15f9833df370d8ee",
+    "git_blob_sha1": "404f6eebbdca49c0dc098d76e244ea3e9de043e1"
   },
   "native_output": {
     "path": "research/robin_psi_x_late_single_crossing_certificate_output.txt",
-    "sha256": "97b6a6202070b5450437b286a68aa2e11245a4f93ea391785a93bf2007e2ce99"
+    "sha256": "97b6a6202070b5450437b286a68aa2e11245a4f93ea391785a93bf2007e2ce99",
+    "git_blob_sha1": "6fb537b653be75ca402c5d8331a2633f3b1d9faf"
   },
   "method": "70-digit mpmath interval arithmetic for 102 global roots, 101 right-half roots, 100 exact residues, time-box enclosures of N_X and N_X', and analytic Gaussian-type residue tail bounds.",
   "runtime": {
