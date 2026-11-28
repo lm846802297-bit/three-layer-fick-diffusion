@@ -44,6 +44,9 @@
 - [更新核推导的 provenance](ROBIN_SPECTRAL_RENEWAL_KERNEL_PROVENANCE.json)
 - [中间时间区域的加权 Poincaré 谱算子](MIDDLE_TIME_WEIGHTED_POINCARE_OPERATOR.md)：给出加权 Sturm–Liouville、Muckenhoupt 与 Chen–Wang 上界；进一步得到精确 score-covariance 曲率恒等式，并证明其正权重严格单峰。
 
+- [Robin 曲率外侧时间区间认证](ROBIN_CURVATURE_SIGN_EXTENSION.md)：以 N=50、70 位区间算术证明 κ=4 基准在 [0.0015,0.010] 严格负曲率，并以首对谱项证明 t≥0.012 严格正曲率；与已有 Q30 中间窗口证书连接后，唯一未关闭区间为 (0,0.0015)。
+- [Q50 外侧区间证书源码](robin_q50_taylor_box_300.py)、[精确输入](robin_q50_taylor_box_300_input.json)、[原生输出](robin_q50_taylor_box_300_output.txt) 与 [Provenance](robin_q50_taylor_box_300_provenance.json)。
+
 附录脚本和原始运行输出在本目录。部分脚本为浮点筛查，不能作为全域证明。后续归档完整性可用 SHA-256 校验：
     
     sha256sum -c FOLLOWUP_SHA256SUMS
