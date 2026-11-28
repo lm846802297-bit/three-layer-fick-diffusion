@@ -1,0 +1,31 @@
+{
+  "benchmark": "static-tie three-layer Fick diffusion",
+  "base_repository": "lm846802297-bit/three-layer-fick-diffusion",
+  "base_branch": "research/two-parameter-spectral-bridge-2026-11-27",
+  "geometry": {
+    "left_layer_1_width": "25/66",
+    "left_layer_1_diffusion": "25",
+    "left_layer_2_width": "4/33",
+    "left_layer_2_diffusion": "1/4",
+    "right_half_width": "1/2",
+    "right_diffusion": "1",
+    "robin_kappa": "4"
+  },
+  "optical_lengths": {
+    "left": "7/22",
+    "right": "1/2"
+  },
+  "target_level": 12,
+  "root_brackets": {
+    "sqrt_L21": ["205.1617247434", "205.1617247438"],
+    "sqrt_L22": ["209.5748600934", "209.5748600939"],
+    "sqrt_R33": ["204.2426865656", "204.2426865661"],
+    "sqrt_R34": ["210.5247035095", "210.5247035100"]
+  },
+  "interval_precision_decimal_digits": 60,
+  "validation": [
+    "monotone phase residual sign brackets",
+    "independent direct transfer-matrix characteristic sign brackets",
+    "interval separation of shifted spectral endpoints"
+  ]
+}
