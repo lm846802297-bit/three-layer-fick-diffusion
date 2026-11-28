@@ -4,19 +4,19 @@
   "artifact": "Q30 finite-window monotonicity and infinite-tail exclusion certificate",
   "source": {
     "path": "research/robin_q30_interval_certificate.py",
-    "sha256": "4d6b93419ac80e1b0f5ed958da3cb5e036270630825542bde44d4cbbdc151ebb"
+    "sha256": "00c3d30064f9826ca3bdaeca7eb3c3bb448d20a1d705bb515cac523fcca47180"
   },
   "input": {
     "path": "research/robin_q30_interval_certificate_input.json",
-    "sha256": "05f1df9918a298166bb17bc8117ba56b4f753b99ace4fc9990fcd2bfd20e8238"
+    "sha256": "f6453a6ba3a3bdfca0dd3047d8f10f223ac09e88600d1ab09ef67c5e0faaeffa"
   },
   "native_output": {
     "path": "research/robin_q30_interval_certificate_output.txt",
-    "sha256": "e118b82100ee2319de6496b2ecefb0c7c7c0f6e382290a3b684186ca789b2ed9"
+    "sha256": "cc8340c42bcc5291259c0d64a62887d7d98f1ce002bd9e73fb7669fb72822a06"
   },
   "analytical_note": {
     "path": "research/ROBIN_CURVATURE_AGGREGATE_SPECTRAL_TAIL.md",
-    "sha256": "a322471c2fd8cc9d3bf1aa7c873ac277fa2faee647e399d52e67b4751beb0724"
+    "sha256": "da27f3d407d39fd1d2704003fecd741d369962fd8d87e33b290e4aded8d38aba"
   },
   "runtime": {
     "python": "3.13.5",
