@@ -160,7 +160,7 @@ More precisely, the sign pattern is now rigorously established on
 \[
 [0.0015,0.010]\cup[0.010,0.012]\cup[0.012,\infty).
 \]
-The remaining interval for the global theorem is \(0<t<0.0015\). The short-time asymptotic establishes negativity for sufficiently small \(t\), but an explicit differentiated remainder bound connecting it to \(t=0.0015\) is not included in this certificate.
+The interval \(0<t\leq0.0015\) is closed by the separate short-time reflection-path certificate. Together with the Q30 middle-window certificate and the first-pair late-time bound in Section 3, the current \(\kappa=4\) benchmark has a complete full-time curvature sign partition.
 
 ## 5. Correction to the high-frequency normalization
 
