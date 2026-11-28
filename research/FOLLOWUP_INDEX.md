@@ -54,6 +54,9 @@
 - [Q30 短时负曲率桥](robin_q30_negative_short_bridge.py)：在 [0.0015,0.004] 以 R2–R70 根括区、有限遗漏对项及 Gaussian 谱尾作独立重叠验证；源码、输入、原生输出和 Provenance 同目录归档。
 - [Q50 外侧区间证书](ROBIN_CURVATURE_SIGN_EXTENSION.md)：在 [0.0015,0.010] 证明严格负性，并在 t>=0.012 证明首对谱项严格支配。
 
+- [Robin 反向风险率导数比较：精确一维加权积分归约](ROBIN_REVERSE_HAZARD_DERIVATIVE_REDUCTION.md)：将 h_X'-h_T' 精确改写为单调条件权重下的积分，并得到等价单积分表示；同时证明全局 psi_X 单调充分条件被短时渐近排除。
+- [反向风险率导数归约 Provenance](ROBIN_REVERSE_HAZARD_DERIVATIVE_REDUCTION_PROVENANCE.json)
+
 附录脚本和原始运行输出在本目录。部分脚本为浮点筛查，不能作为全域证明。后续归档完整性可用 SHA-256 校验：
     
     sha256sum -c FOLLOWUP_SHA256SUMS
