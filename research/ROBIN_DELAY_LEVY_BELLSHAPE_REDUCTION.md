@@ -153,8 +153,8 @@ m(u)\ge k+1
 \]
 令
 \[
-d_{i,k}:=\sqrt{\sigma_i}-\sqrt{\rho_{i+k}}
-=\sqrt{L_i}-\sqrt{R_{i+k}}.
+d_{i,k}:=\sqrt{L_i}-\sqrt{R_{i+k}}.
+
 \]
 则 level-crossing 条件等价于：对每个 \(k\ge1\)，序列 \(d_{i,k}\) 不允许出现“先严格为正、后来又严格为负”。即
 \[
