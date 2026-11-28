@@ -3,7 +3,7 @@
   "branch": "research/two-parameter-spectral-bridge-2026-11-27",
   "artifact": {
     "path": "research/ROBIN_CURVATURE_AGGREGATE_SPECTRAL_TAIL.md",
-    "sha256": "b1c25501a7f9aa518d6f3c7b89b9c13a7de1914947f78d96c986173ddfc5a366"
+    "sha256": "ae445c50f3c41ca6824279810e2f15efef3606683fb2d9637f8894719b5ff810"
   },
   "inputs": [
     {
@@ -32,7 +32,7 @@
     "The high-frequency canonical-product normalization includes the factor L1/R1"
   ],
   "open_items": [
-    "Connect the now-certified full-time unique zero of (log f_Z)'' at kappa=4 to the score-renewal inequality h_T'<h_X'",
+    "Connect the certified full-time unique zero of (log f_Z)'' at kappa=4 to the score-renewal inequality h_T'<h_X'",
     "Complete the final r(t) unimodality theorem for the intended parameter domain"
   ]
 }
