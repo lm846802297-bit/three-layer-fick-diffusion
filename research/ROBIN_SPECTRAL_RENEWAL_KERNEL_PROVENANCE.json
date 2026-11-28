@@ -2,39 +2,41 @@
   "repository": "lm846802297-bit/three-layer-fick-diffusion",
   "branch": "research/two-parameter-spectral-bridge-2026-11-27",
   "base_commit": "b446ed0f79b0082ccf1c6636c05f284785c24051",
-  "artifact": "research/ROBIN_SPECTRAL_RENEWAL_KERNEL_AND_REVERSE_HAZARD_COMPARISON.md",
-  "artifact_sha256": "9a09bb2ee926c20269da54f7b54e6f0f83cd21dbc0fe0500e56d1cfc5074cce2",
+  "artifact": {
+    "path": "research/ROBIN_SPECTRAL_RENEWAL_KERNEL_AND_REVERSE_HAZARD_COMPARISON.md",
+    "sha256": "39a8ded0f424da4514e79a377c0f33cb912267a6a6398262f37841fc630732ce"
+  },
   "inputs": [
     {
       "path": "research/FIRST_INVERSION_RATIO_SHAPE_REDUCTION.md",
-      "sha256": "68369ee9e019a1f04ab247b1f62fa0c28f208010e245ef390d53c7a8d75b4a50"
+      "sha256": "7a438c2e19d1058653e9ed5a8181dcefc09bd4f14ebba7fc8300591e830a8e2b"
     },
     {
       "path": "research/CONDITIONAL_CDF_GAP_PEAK_ASYMPTOTICS.md",
-      "sha256": "46aaea817f67b703dfb3dbfac1372c09e5b7184de99733c64a5ae0cc3bd16135"
+      "sha256": "9c958cfa2fab8b6c2e8656ff374d883889fd255143e59a0fe65e0ed3134c6a30"
     },
     {
       "path": "research/WEIGHTED_CONDITIONAL_VARIANCE_AND_FIRST_PASSAGE_LITERATURE.md",
-      "sha256": "8f53cd2db8a7792651b0965730a9f96df2f2312c3610a7d850f68c63809c902c"
+      "sha256": "004a0cece514d12fe95594e3ad0f71e6cc40380395d9f0f22b15a87502c44e88"
     },
     {
       "path": "research/ROBIN_DELAY_LEVY_BELLSHAPE_REDUCTION.md",
-      "sha256": "d47d3f06eef22f2904ce9b84e450b033b8dc88ca2ac2b33530344bdc5b63a4e6"
+      "sha256": "b1c813811df5fc8527110ab97c78a29d7eb420fa4652040ac15ee16e5dbe71e0"
     }
   ],
   "method": "Analytic derivation only: Laplace differentiation, uniqueness of Laplace transforms, Sturm-Liouville Weyl counting, and existing conditional-score identities.",
   "computation": "No numerical computation or new spectral-root calculation was performed.",
   "literature": [
     {
-      "reference": "L. Bondesson, Z. Wahrscheinlichkeitstheorie verw. Gebiete 57 (1981), 39-71",
+      "reference": "L. Bondesson, Classes of Infinitely Divisible Distributions and Densities, Z. Wahrscheinlichkeitstheorie verw. Gebiete 57 (1981), 39-71",
       "doi": "10.1007/BF00533713"
     },
     {
-      "reference": "S. Bridaa, W. Jedidi, H. S. Sendov, Journal of Theoretical Probability",
+      "reference": "S. Bridaa, W. Jedidi, H. S. Sendov, Generalized Unimodality and Subordinators, Journal of Theoretical Probability",
       "doi": "10.1007/s10959-023-01242-z"
     },
     {
-      "reference": "M. Kwaśnicki and T. Simon, Mathematische Zeitschrift 301 (2022), 3207-3230",
+      "reference": "M. Kwaśnicki and T. Simon, Characterisation of the class of bell-shaped functions, Mathematische Zeitschrift 301 (2022), 3207-3230",
       "doi": "10.1007/s00209-022-02997-7"
     }
   ]
