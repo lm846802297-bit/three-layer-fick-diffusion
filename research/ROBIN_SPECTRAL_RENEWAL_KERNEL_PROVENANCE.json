@@ -4,7 +4,7 @@
   "base_commit": "b446ed0f79b0082ccf1c6636c05f284785c24051",
   "artifact": {
     "path": "research/ROBIN_SPECTRAL_RENEWAL_KERNEL_AND_REVERSE_HAZARD_COMPARISON.md",
-    "sha256": "6ea3c34ecf6fb859fcda5a3aa5741d9ca1c0141915ceb968d77bcf6bcf0ec338"
+    "sha256": "74b3c937823f3ed2649f31a3102beced5f0f23a33b183800c97269d08ac8611e"
   },
   "inputs": [
     {
@@ -24,7 +24,7 @@
       "sha256": "b1c813811df5fc8527110ab97c78a29d7eb420fa4652040ac15ee16e5dbe71e0"
     }
   ],
-  "method": "Analytic derivation only: Laplace differentiation, uniqueness of Laplace transforms, Sturm-Liouville Weyl counting, conditional-score identities, and differentiation of the renewal equation.",
+  "method": "Analytic derivation only: Laplace differentiation, uniqueness of Laplace transforms, Sturm-Liouville Weyl counting, conditional-score identities, differentiation of the renewal equation, and single-peak weight bounds.",
   "computation": "No numerical computation or new spectral-root calculation was performed.",
   "literature": [
     {
@@ -38,6 +38,14 @@
     {
       "reference": "M. Kwaśnicki and T. Simon, Characterisation of the class of bell-shaped functions, Mathematische Zeitschrift 301 (2022), 3207-3230",
       "doi": "10.1007/s00209-022-02997-7"
+    },
+    {
+      "reference": "C. Sangüesa, F. G. Badía and J. H. Cha, Preservation of ageing classes in deterioration models with independent increments, Journal of Inequalities and Applications (2014), 200",
+      "doi": "10.1186/1029-242x-2014-200"
+    },
+    {
+      "reference": "M. Alimohammadi, N. Balakrishnan and T. Simon, An inequality for log-concave functions and its use in the study of failure rates, Probability in the Engineering and Informational Sciences 38 (2024), 695-704",
+      "doi": "10.1017/S0269964824000056"
     }
   ]
 }
