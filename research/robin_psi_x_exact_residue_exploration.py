@@ -106,7 +106,6 @@ R = [x * x for x in k_right]
 c = lam[1]
 lam1, R1 = lam[0], R[0]
 
-
 # P_G(z)=D_G(sqrt(-z))/D_G(0), P_R(z)=Y_R(sqrt(-z))/Y_R(0).
 # For a root k, P_G'(-k^2)=-D_G'(k)/(2 k D_G(0)); D_G(0)=24.
 def PG_prime_at(k):
