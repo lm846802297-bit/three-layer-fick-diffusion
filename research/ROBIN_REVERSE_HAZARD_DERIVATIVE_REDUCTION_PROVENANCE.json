@@ -3,7 +3,7 @@
   "branch": "research/two-parameter-spectral-bridge-2026-11-27",
   "artifact": {
     "path": "research/ROBIN_REVERSE_HAZARD_DERIVATIVE_REDUCTION.md",
-    "sha256": "dbe3ccf7276f535f54bb0c0e1cac3365a92fbed77a4d54610a2e0595cc10aed9"
+    "sha256": "b6c49f8e8ed92a0a4b62cf80a4e62c0dd9b49e6a3c8d7f4a1fbe9e6c6e5c4d8a"
   },
   "method": "Analytic derivation only; no new spectral roots, numerical scans, or numerical certificate were produced.",
   "assumptions": [
@@ -38,8 +38,9 @@
     "The origin weight w_t(u) has O(u^(5/2) exp(-d_X^2/(4u))) decay, making the weighted psi_X' integral convergent"
   ],
   "open_items": [
-    "Prove positivity of the weighted integral in equation (4.2), equivalently the single-integral expectation in (4.3).",
-    "Control the negative short-u part using the optical exponential suppression of w_t(u), and use the established full-time f_Z curvature result to bound the conditional weight f_Z(t-v)."
+    "Certify that psi_X' is negative only on an initial interval and nonnegative thereafter, with a rigorous enclosure of its sign-change point u_0.",
+    "For a chosen epsilon>z_*, certify the scalar margin D(epsilon)>0 in equation (7.3) using the existing root enclosures and analytic spectral tails.",
+    "Close the remaining short-time interval 0<t<=2 epsilon for h_X'-h_T'."
   ],
   "runtime": "No code execution. This is an analytic derivation based on existing archived results."
 }
