@@ -1,0 +1,49 @@
+{
+  "benchmark": {
+    "w1": "25/66",
+    "D1": "25",
+    "w2": "4/33",
+    "D2": "1/4",
+    "right_half_width": "1/2",
+    "D_right": "1",
+    "kappa": "4"
+  },
+  "spectral": {
+    "finite_residue_indices": [2, 80],
+    "global_roots_required": 82,
+    "root_scan_kmax": "500",
+    "root_scan_step": "0.05",
+    "root_bracket_half_width": "1e-30",
+    "root_bracket_digits": 30,
+    "right_first_root_wave_number_bracket": [
+      "4.57785945620680872964282824434745928699999999999999999999999999999999997873",
+      "4.57785945620680872964282844434745928700000000000000000000000000000000006073"
+    ]
+  },
+  "interval_arithmetic": {
+    "mpmath_digits": 90,
+    "interval_digits": 80,
+    "time_center_enclosure_radius": "1e-60",
+    "taylor_degree": 8
+  },
+  "time_certification": {
+    "tau": "0.0015",
+    "start": "0.0015",
+    "end": "0.010",
+    "maximum_box_width": "0.00002",
+    "expected_boxes": 426
+  },
+  "infinite_tail_bounds": {
+    "residue_constant": "3e7",
+    "rate_upper_constant": "100*pi^2",
+    "rate_lower_constant": "14",
+    "tail_start_index": 81
+  },
+  "acceptance": {
+    "N_X_upper_bound": "-0.0112",
+    "all_time_boxes_strictly_negative": true,
+    "sturm_node_counts": "0 through 81 for the first 82 global roots",
+    "tail_derivative_orders": "0 through 11 for the Taylor remainder"
+  },
+  "scope": "This certificate proves N_X(t)<0 only on [0.0015,0.010] for the fixed kappa=4 static equal-resistance benchmark."
+}
