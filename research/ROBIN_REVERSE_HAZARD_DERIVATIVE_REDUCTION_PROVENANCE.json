@@ -1,0 +1,45 @@
+{
+  "repository": "lm846802297-bit/three-layer-fick-diffusion",
+  "branch": "research/two-parameter-spectral-bridge-2026-11-27",
+  "artifact": {
+    "path": "research/ROBIN_REVERSE_HAZARD_DERIVATIVE_REDUCTION.md",
+    "sha256": "ead949e2b6989019e77b5ba305871050b5777a7eeae22c030a01dcf9982fc089"
+  },
+  "method": "Analytic derivation only; no new spectral roots, numerical scans, or numerical certificate were produced.",
+  "assumptions": [
+    "X_c and Z_c are independent with T_c=X_c+Z_c",
+    "The positive optical gap gives f_X(0+)=0, so f_T'=f_X'*f_Z without a boundary term",
+    "The conditional law pi_t is proportional to F_X(t-z) f_Z(z) on (0,t)",
+    "Existing Robin short-time and late-time asymptotics for f_X are reused"
+  ],
+  "dependencies": [
+    {
+      "path": "research/MIDDLE_TIME_WEIGHTED_POINCARE_OPERATOR.md",
+      "role": "conditional variance and Stein-kernel identities"
+    },
+    {
+      "path": "research/WEIGHTED_CONDITIONAL_VARIANCE_AND_FIRST_PASSAGE_LITERATURE.md",
+      "role": "spectral tilted laws and small/late-time variance asymptotics"
+    },
+    {
+      "path": "research/CONDITIONAL_CDF_GAP_PEAK_ASYMPTOTICS.md",
+      "role": "conditional distributions and optical-length asymptotics"
+    },
+    {
+      "path": "research/ROBIN_CURVATURE_GLOBAL_UNIQUE_ZERO_KAPPA4.md",
+      "role": "completed f_Z score-curvature theorem for the fixed kappa=4 benchmark"
+    }
+  ],
+  "results": [
+    "Exact identity h_T'=E_pi[psi_X(t-Z)]-h_T^2, psi_X=f_X'/F_X",
+    "Exact monotone-weight integral for h_X'-h_T'",
+    "Exact single-integral representation under the law of U_t=t-Z conditional on T_c<=t",
+    "The sufficient condition psi_X'>=0 globally is ruled out by the short-time asymptotic and late-time pole asymptotic",
+    "The origin weight w_t(u) has O(u^(5/2) exp(-d_X^2/(4u))) decay, making the weighted psi_X' integral convergent"
+  ],
+  "open_items": [
+    "Prove positivity of the weighted integral in (4.4) or equivalently the single-integral expectation in (5.1)",
+    "Use the full-time f_Z curvature theorem to control f_Z(t-v) in the conditional weight where useful"
+  ],
+  "runtime": "No code execution. This is an analytic derivation based on existing archived results."
+}
