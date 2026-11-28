@@ -32,6 +32,7 @@
 
 - [条件方差的加權控制与首次通过时间文献边界](WEIGHTED_CONDITIONAL_VARIANCE_AND_FIRST_PASSAGE_LITERATURE.md)：区分 Keilson/Assaf 的单一首次通过密度结论，建立 Stein-kernel 条件方差判据，并得到近打平晚时的谱渐近方差裕量。
 - [条件 CDF 差的概率解释与峰值位置两端渐近](CONDITIONAL_CDF_GAP_PEAK_ASYMPTOTICS.md)：将单峰权重解释为两个条件分布的 CDF 差，得到峰值位置的光学小时间极限与指数倾斜晚时间极限，并证明目标方差不等式在两端时间区间成立。
+- [Robin 延迟谱乘积的 Lévy 表示与 bell-shaped 判据](ROBIN_DELAY_LEVY_BELLSHAPE_REDUCTION.md)：将指数倾斜延迟分布写成完全单调 Lévy 密度，并把 Kwaśnicki–Simon 的整数水平穿越条件归约为 Robin 谱区间重叠条件及有限低模检查。
 - [中间时间区域的加权 Poincaré 谱算子](MIDDLE_TIME_WEIGHTED_POINCARE_OPERATOR.md)：给出加权 Sturm–Liouville、Muckenhoupt 与 Chen–Wang 上界；进一步得到精确 score-covariance 曲率恒等式，并证明其正权重严格单峰。
 
 附录脚本和原始运行输出在本目录。部分脚本为浮点筛查，不能作为全域证明。后续归档完整性可用 SHA-256 校验：
