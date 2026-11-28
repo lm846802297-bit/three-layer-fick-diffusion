@@ -34,7 +34,7 @@
 - [条件 CDF 差的概率解释与峰值位置两端渐近](CONDITIONAL_CDF_GAP_PEAK_ASYMPTOTICS.md)：将单峰权重解释为两个条件分布的 CDF 差，得到峰值位置的光学小时间极限与指数倾斜晚时间极限，并证明目标方差不等式在两端时间区间成立。
 - [Robin 延迟谱乘积的 Lévy 表示与 bell-shaped 判据：静态打平基准的反例](ROBIN_DELAY_LEVY_BELLSHAPE_REDUCTION.md)：建立完全单调 Lévy 表示，并用 k=12 的区间谱证书证明当前静态打平基准不满足 Kwaśnicki–Simon 条件；因此 f_Z 不是 bell-shaped，原先相邻谱间距有限化论证撤回。
 - [第 12 级 bell-shape 反例的区间证书](robin_bellshape_level12_obstruction.py)：认证 sqrt(L21)>sqrt(R33) 与 sqrt(L22)<sqrt(R34)，并保存精确输入、原生输出和 provenance。
-- [Robin 谱更新核与反向风险率导数比较](ROBIN_SPECTRAL_RENEWAL_KERNEL_AND_REVERSE_HAZARD_COMPARISON.md)：证明 score-curvature 积分恰等于 h_T'，建立正次级过程更新方程、两个 Robin 更新核的加法分解，以及谱区间重叠数的计数函数表示。
+- [Robin 谱更新核与反向风险率导数比较](ROBIN_SPECTRAL_RENEWAL_KERNEL_AND_REVERSE_HAZARD_COMPARISON.md)：将曲率积分化为 h_T'，建立 Robin 更新核的加法分解、半谱计数表示，以及 score-renewal 方程和历史权重输运恒等式。
 - [更新核推导的 provenance](ROBIN_SPECTRAL_RENEWAL_KERNEL_PROVENANCE.json)
 - [中间时间区域的加权 Poincaré 谱算子](MIDDLE_TIME_WEIGHTED_POINCARE_OPERATOR.md)：给出加权 Sturm–Liouville、Muckenhoupt 与 Chen–Wang 上界；进一步得到精确 score-covariance 曲率恒等式，并证明其正权重严格单峰。
 
