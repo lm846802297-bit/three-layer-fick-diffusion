@@ -1,4 +1,4 @@
-# Robin 延迟谱乘积的 Lévy 表示与 bell-shaped 密度判据
+# Robin 延迟谱乘积的 Lévy 表示与 bell-shaped 判据：静态打平基准的反例
 
 ## 1. 对象
 
@@ -18,7 +18,7 @@
 \[
 \prod_{i\ge2}\frac{\rho_i}{\sigma_i}=0,
 \]
-故 \(Z_c\) 无零点原子。这里不重新研究其晚时留数或小时间鞍点。
+故 \(Z_c\) 无零点原子。
 
 ## 2. 精确 Lévy–Khintchine 表示
 
@@ -76,19 +76,14 @@ m(u)=\sum_{i\ge2}\mathbf1_{[\rho_i,\sigma_i)}(u).
 由 \(\rho_i\asymp i^2\)，
 \[
 \int_1^\infty\frac{m(u)}{u^3}\,du
-=
-\sum_{i\ge2}\int_{\max(1,\rho_i)}^{\sigma_i}u^{-3}\,du
-\le \frac12\sum_{i\ge2}\rho_i^{-2}<\infty.
-\tag{2.2}
-\]
-同时
-\[
+\le \frac12\sum_{i\ge2}\rho_i^{-2}<\infty,
+\qquad
 \int_1^\infty\frac{m(u)}{u^2}\,du
 \le\sum_{i\ge2}\rho_i^{-1}<\infty.
-\tag{2.3}
+\tag{2.2}
 \]
 
-## 3. Kwaśnicki–Simon bell-shape 判据
+## 3. Kwaśnicki–Simon 表示与必要条件
 
 取特征函数
 \[
@@ -117,7 +112,7 @@ m(u)=\sum_{i\ge2}\mathbf1_{[\rho_i,\sigma_i)}(u).
 \[
 b=\int_1^\infty\frac{m(u)}{u^2}\,du<\infty.
 \]
-这正是 Kwaśnicki 的 Stieltjes 型 Fourier 表示，且其 level-crossing 函数为
+所以 Kwaśnicki–Simon 表示中的 level-crossing 函数正是
 \[
 \varphi(u)=
 \begin{cases}
@@ -125,170 +120,214 @@ m(u),&u>0,\\
 0,&u<0.
 \end{cases}
 \]
-正则条件自动成立：\(|\Phi(\xi)|\le1\)，故
-\[
-\int_{-1}^1\operatorname{Re}\Phi(\xi)\,d\xi<\infty,
-\qquad
-\lim_{\xi\to0}\operatorname{Im}\Phi(\xi)=0.
-\]
-可积条件由 (2.2) 给出。
 
-Kwaśnicki 的定理指出：若对每个整数 \(k\)，\(\varphi-k\) 至多改变一次符号，且 \(k=0\) 时满足正负半轴的规定符号，则对应函数 weakly bell-shaped；若该密度光滑，则它是 bell-shaped。参见：
+正则条件成立，因为 \(|\Phi(\xi)|\le1\) 且 \(\Phi(0)=1\)；可积条件由 (2.2) 给出。正光学间隙还给出 Fourier 变换的高频衰减，故 \(Z_c\) 具有光滑密度。
+
+Kwaśnicki–Simon 的完整刻画不只是一个充分判据：每个 weakly bell-shaped 函数的 Fourier 表示都必须满足整数水平穿越条件，而且表示函数由 Fourier 变换唯一恢复。参见：
 
 - M. Kwaśnicki, *A new class of bell-shaped functions*, Transactions of the AMS 373 (2020), 349–382, [DOI](https://doi.org/10.1090/tran/7825).
-- M. Kwaśnicki and T. Simon, *Characterisation of the class of bell-shaped functions*, Mathematische Zeitschrift 301 (2022), 3207–3230, [DOI](https://doi.org/10.1007/s00209-022-02997-7).
+- M. Kwaśnicki and T. Simon, *Characterisation of the class of bell-shaped functions*, Mathematische Zeitschrift 301 (2022), 3207–3230, [DOI](https://doi.org/10.1007/s00209-022-02997-7), 尤其是 Theorem 1.3 及其前面的 Theorem 1.1。
 
-在本模型中，\(m(u)\ge0\) 且 \(m(u)=0\) 对 \(u<\rho_2\)，所以 \(k=0\) 条件自动满足。真正需要检查的是整数水平 \(k\ge1\)。
+因此，如果 \(m(u)-k\) 对某个整数 \(k\) 出现“负—正—负”符号序列，则 \(f_Z\) 不可能是 weakly bell-shaped，也就不可能是严格 bell-shaped 密度。
 
 ## 4. 整数水平穿越的精确谱条件
 
-因为 \((\rho_i)\) 与 \((\sigma_i)\) 均严格递增，所有在给定 \(u\) 处活跃的谱区间指标构成连续整数段。于是
+由于 \((\rho_i)\)、\((\sigma_i)\) 均严格递增，在固定 \(u\) 处活跃的谱区间指标构成连续整数段。于是
 \[
-\boxed{
 m(u)\ge k+1
 \iff
 \exists i\ge2:\quad \rho_{i+k}\le u<\sigma_i.
-}
 \tag{4.1}
 \]
 令
 \[
 d_{i,k}:=\sqrt{L_i}-\sqrt{R_{i+k}}.
-
 \]
-则 level-crossing 条件等价于：对每个 \(k\ge1\)，序列 \(d_{i,k}\) 不允许出现“先严格为正、后来又严格为负”。即
+则 Kwaśnicki–Simon 的 level-crossing 条件等价于
 \[
 \boxed{
 d_{i,k}>0,\ i<j
 \quad\Longrightarrow\quad
-d_{j,k}\ge0.
+d_{j,k}\ge0,
+\qquad k\ge1.
 }
 \tag{4.2}
 \]
-等号对应两个谱端点同时到达，不造成 \(m-k\) 的负向穿越。
+注意，等号只对应 \(m(u)=k\) 的零平台，不构成负向穿越。真正禁止的是 \(d_{i,k}\) 先为正、后来又为负。
 
-解释：\(d_{i,k}>0\) 表示第 \(i\) 至第 \(i+k\) 个谱区间曾同时覆盖某个频率。若之后某个 \(j\) 有 \(d_{j,k}<0\)，则在 \(\sigma_j\) 处退出第 \(j\) 个区间后，活跃区间数会降到 \(k\) 以下，使 \(m-k\) 从正值回到负值。反之，若正值之后所有 \(d_{j,k}\ge0\)，后续每次区间退出都至少保留 \(k\) 个活跃区间，故不会再次跌到 \(k\) 以下。
+## 5. 现有静态打平 Robin 基准：\(k=12\) 的严格反例
 
-## 5. 为什么该条件可化为有限低模检查
-
-令
+取已经归档的静态打平基准：
 \[
-\Delta_i^L=\sqrt{L_{i+1}}-\sqrt{L_i},\qquad
-\Delta_j^R=\sqrt{R_{j+1}}-\sqrt{R_j}.
-\]
-对有限层、正扩散系数的 Sturm–Liouville 半谱，
-\[
-\Delta_i^L\longrightarrow\frac{\pi}{\ell_L},
+w_1=\frac{25}{66},\quad D_1=25,
 \qquad
-\Delta_j^R\longrightarrow\frac{\pi}{\ell_R}.
+w_2=\frac4{33},\quad D_2=\frac14,
 \]
-在本研究的严格光学间隙侧，
+右半区
 \[
-\ell_L<\ell_R,
+D_R=1,\qquad \kappa=4.
 \]
-故
+其光学长度为
 \[
-\frac{\pi}{\ell_L}>\frac{\pi}{\ell_R}.
+\ell_L=\frac7{22},\qquad \ell_R=\frac12.
 \]
-于是存在一个有限整数 \(I_0\)，使得
+本节只使用已经存在的模型参数，不重新求解整个谱。
+
+### 5.1 四个半谱根的区间括定
+
+使用单调 Prüfer 相位方程，得到以下波数根区间：
 \[
-\inf_{i\ge I_0}\Delta_i^L
->
-\sup_{j\ge I_0}\Delta_j^R.
+\begin{aligned}
+\sqrt{L_{21}}&\in[205.1617247434,\ 205.1617247438],\\
+\sqrt{L_{22}}&\in[209.5748600934,\ 209.5748600939],\\
+\sqrt{R_{33}}&\in[204.2426865656,\ 204.2426865661],\\
+\sqrt{R_{34}}&\in[210.5247035095,\ 210.5247035100].
+\end{aligned}
 \tag{5.1}
 \]
+相位残差在各括区两端严格异号；左半相位导数严格为正，右半相位导数也严格为正，因此这些括区分别对应所标记的第 21、22、33、34 个根。
 
-对固定 \(k\ge1\)，定义
+此外，对同一组括区直接代入两层传递矩阵特征函数，端点仍严格异号。这是与相位残差不同表达式的独立核对。
+
+区间运算给出
 \[
-d_{i,k}=\sqrt{L_i}-\sqrt{R_{i+k}}.
+\boxed{
+\sqrt{L_{21}}-\sqrt{R_{33}}
+\in[0.9190381773,\ 0.9190381782]>0,
+}
 \]
-当 \(i\ge I_0\) 时，
+以及
 \[
-d_{i+1,k}-d_{i,k}
-=\Delta_i^L-\Delta_{i+k}^R>0.
+\boxed{
+\sqrt{L_{22}}-\sqrt{R_{34}}
+\in[-0.9498434166,\ -0.9498434155]<0.
+}
 \tag{5.2}
 \]
-所以对每个 \(k\)，\(d_{i,k}\) 在 \(i\ge I_0\) 上严格递增，并最终趋于 \(+\infty\)。又因 \(R_{i+k}\to\infty\)，对所有 \(i<I_0\)，当 \(k\) 足够大时 \(d_{i,k}<0\)。
-
-定义有限阈值
+因此
 \[
-K_0=
-\max_{2\le i<I_0}
-\max\{k\ge1:\sqrt{R_{i+k}}<\sqrt{L_i}\},
+\boxed{
+\rho_{33}<\sigma_{21}<\sigma_{22}<\rho_{34}.
+}
+\tag{5.3}
 \]
-若集合为空则令 \(K_0=0\)。那么：
+这里 \(\sigma_i=L_i-c\)、\(\rho_i=R_i-c\)，公共倾斜参数 \(c\) 在比较中完全抵消。
 
-- 对 \(k>K_0\)，所有 \(i<I_0\) 均有 \(d_{i,k}\le0\)；从 \(I_0\) 起 \(d_{i,k}\) 严格递增，故不可能出现正值后再回到负值。
-- 对 \(1\le k\le K_0\)，只需检查有限个低模指标 \(2\le i\le I_0\)，确认序列 \(d_{i,k}\) 没有“正值后又出现负值”；之后由 (5.2) 自动保持。
+### 5.2 直接违反第 12 个整数水平条件
 
-因此，**Kwaśnicki–Simon 定理的全部整数水平条件，可由高频谱间距定理加有限个低模区间检查完成。**
-
-这是一项重要的简化：不需要对无穷多个 \(k\) 和无穷多个谱模逐一进行独立认证。
-
-## 6. 对 \(f_Z\) 的结论及其对当前证明的价值
-
-若有限低模检查通过，并采用已有正光学距离的 sectorial 高频估计
+由 (5.3)，可选取
 \[
-|\widehat\nu_c(i\xi)|
-\le C e^{-(\ell_R-\ell_L)\sqrt{|\xi|/2}}
+u_+\in(\rho_{33},\sigma_{21}),
+\qquad
+u_-\in(\sigma_{22},\rho_{34}),
 \]
-（大 \(|\xi|\)），则 \(\Phi\) 的任意多项式加权均可积，Fourier 反演给出 \(f_Z\in C^\infty(\mathbb R)\)。已有小时间鞍点渐近给出 \(f_Z'(z)>0\) 对充分小的 \(z>0\) 成立；最慢极点 \(-\rho_2\) 的正留数给出 \(f_Z'(z)<0\) 对充分大的 \(z\) 成立，而 \(f_Z=0\) 于负半轴。因此定理所需的端部单调性与衰减条件也满足。于是 Kwaśnicki–Simon 判据推出
+且
 \[
-\boxed{f_Z\text{ 是严格 bell-shaped 密度。}}
+u_+<\sigma_{21}<\sigma_{22}<u_-.
 \]
 
-特别地：
+在 \(u_+\) 处，对所有 \(i=21,\ldots,33\)，均有
+\[
+\rho_i\le\rho_{33}<u_+<\sigma_{21}\le\sigma_i.
+\]
+因此至少有 13 个谱区间同时活跃：
+\[
+m(u_+)\ge13,
+\qquad
+m(u_+)-12>0.
+\]
 
-1. \(f_Z'\) 恰有一个符号变化，故 \(f_Z\) 严格单峰。
-2. \(f_Z''\) 恰有两个符号变化，故密度有且仅有两个拐点。
-3. 在 \(f_Z''<0\) 的中央区间，
-   \[
-   (\log f_Z)''
-   =\frac{f_Z''}{f_Z}
-    -\left(\frac{f_Z'}{f_Z}\right)^2<0.
-   \]
-4. 已有谱留数结果表明，在特定 Robin 谱交错下，\((\log f_Z)''\) 的晚时尾部严格为正。
+在 \(u_-\) 处，所有 \(i\le22\) 的区间已经退出，而所有 \(i\ge34\) 的区间尚未进入。因此至多只有 \(i=23,\ldots,33\) 这 11 个区间可能活跃：
+\[
+m(u_-)\le11,
+\qquad
+m(u_-)-12<0.
+\]
 
-因此，bell-shape 结构将延迟密度的普通曲率符号限制在两个外侧凸区间和一个中央凹区间中。它没有直接证明 \((\log f_Z)''\) 只有一次变号，也没有直接推出 \(r(t)\) 单峰；这两点不能从 bell-shaped 定义中跳过。
+同时，在 \(u_0<\rho_2\) 时 \(m(u_0)=0\)，故
+\[
+m(u_0)-12<0.
+\]
+于是严格得到
+\[
+\boxed{
+m(u_0)-12<0,\qquad
+m(u_+)-12>0,\qquad
+m(u_-)-12<0,
+\quad u_0<u_+<u_-.
+}
+\tag{5.4}
+\]
 
-## 7. 与最终曲率问题的连接
+这已经是第 12 个整数水平的两次符号变化，不满足 Kwaśnicki–Simon 条件。
 
-仍然使用已经证明的恒等式
+### 5.3 结论
+
+\[
+\boxed{
+\text{该静态打平 Robin 基准的 }f_Z
+\text{ 不是 bell-shaped 密度。}
+}
+\tag{5.5}
+\]
+这是一个解析区间证书，而不是浮点扫描结论。
+
+## 6. 对先前高频有限化论证的修正
+
+此前曾尝试使用
+\[
+\sqrt{L_{i+1}}-\sqrt{L_i}\longrightarrow\frac{\pi}{\ell_L}
+\]
+来推出所有充分高阶相邻谱间距的统一下界。对于扩散系数在内部界面发生跳变的分层介质，这一步没有依据：Weyl 渐近控制的是平均谱计数，不自动控制每一个相邻波数间距。
+
+在当前基准中，忽略 \(O(k^{-1})\) 的 Robin 边界修正，左半特征函数的高频主项为
+\[
+\begin{aligned}
+Y_L(k)
+&=\cos\left(\frac{5k}{66}\right)
+  \cos\left(\frac{16k}{66}\right)
+ -10\sin\left(\frac{5k}{66}\right)
+  \sin\left(\frac{16k}{66}\right)
+ +O(k^{-1})\\
+&=\frac12\left[
+11\cos\left(\frac{21k}{66}\right)
+-9\cos\left(\frac{11k}{66}\right)
+\right]+O(k^{-1}).
+\end{aligned}
+\tag{6.1}
+\]
+它是两个相位频率的组合，而不是单一余弦。故不能仅由总光学长度推出相邻左半波数间距逐项收敛到 \(\pi/\ell_L\)。
+
+因此，原先基于统一相邻谱间距的 \(I_0,K_0\) 有限化证明不适用于当前分层基准。更重要的是，(5.4) 已经直接否定该基准的 bell-shape 条件，不必再试图通过高阶谱尾来补救。
+
+## 7. 对原始曲率问题的影响
+
+本结果只排除一种证明工具：
+\[
+f_Z\text{ 全局 bell-shaped}.
+\]
+它不意味着
+\[
+(\log f_Z)''
+\]
+没有可利用的局部符号结构，也不意味着最终的 \(r(t)\) 单峰性不成立。
+
+因此，后续不再以 bell-shaped 密度为前提，也不再从 \(f_Z''\) 的两个拐点推导中央对数凹区间。应回到已经建立的精确恒等式
 \[
 h_T'-h_X'
 =
 A_t(0)+
 \int_0^tW_t(z)(\log f_Z(z))''\,dz,
 \]
-其中
-\[
-W_t'(z)=p_t(z)[h_T-h_X(t-z)]
-\]
-且 \(W_t\) 严格单峰。
+直接研究谱留数和条件分布对这个加权积分的控制。
 
-本轮新结果提供了一个可用的分区：
+## 8. 可复核归档
 
-- \(f_Z''<0\) 的中央区间自动贡献负的对数曲率积分；
-- 晚时 \(f_Z''>0\) 区间需要继续使用已有谱留数上界；
-- 小时间外侧区间由高频鞍点估计处理；
-- 只需进一步定位 \(W_t\) 的峰值 \(y_t\) 与两个密度拐点的相对位置，便可尝试将积分分成有明确符号的区域。
+新增证书文件：
 
-这是一条比全局对数凹性更弱、也更符合已知 Robin 谱结构的路线。
+- robin_bellshape_level12_obstruction.py：60 位 mpmath 区间算术；相位括根及独立传递矩阵端点符号核对。
+- robin_bellshape_level12_obstruction_input.json：精确几何、目标整数水平及四个根括区。
+- robin_bellshape_level12_obstruction_output.txt：原生区间运行结果。
+- robin_bellshape_level12_obstruction_provenance.json：源码、输入、输出 SHA-256 与运行环境。
 
-## 8. 本轮结论与待完成事项
-
-**本轮已解析建立：**
-
-1. \(Z_c\) 的精确 Lévy–Khintchine 表示。
-2. Lévy 密度的严格完全单调性。
-3. Kwaśnicki–Simon bell-shape 定理在本谱乘积中的精确 level-crossing 函数。
-4. 整数水平条件与 Robin 谱区间重叠条件 (4.2) 的等价关系。
-5. 高频谱间距将无限水平条件压缩为有限低模检查的充分条件。
-
-**尚未完成：**
-
-- 对当前整个 Robin 参数域证明有限低模重叠检查通过；
-- 利用 bell-shape 得到 \((\log f_Z)''\) 的单次变号或足够强的尾部积分界；
-- 证明完整的 \((\log r(t))''<0\)。
-
-本轮没有重新计算谱根，也没有把条件性 bell-shape 结论误写成整个参数域已通过的定理。
+本轮没有重新计算已有扩散谱的全体根；只对四个已有高阶根位置进行了窄区间认证。当前静态打平基准的 bell-shape 检验已经关闭，后续研究回到加权 score 曲率问题。
