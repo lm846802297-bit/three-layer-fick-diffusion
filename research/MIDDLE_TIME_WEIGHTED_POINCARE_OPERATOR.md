@@ -171,7 +171,7 @@ f_Z(z)\asymp z^{-3/2}
 \qquad z\downarrow0,
 \]
 \[
-F_X(u)\asymp u^{1/2}
+F_X(u)\asymp u^{-1/2}
 \exp\left[-\frac{d_X^2}{4u}\right],
 \qquad u\downarrow0,
 \]
@@ -192,9 +192,9 @@ A_X(u)=-h_X'(u)\asymp u^{-3}.
 
 - 当 \(x\uparrow t\)，令 \(u=t-x\)，则
   \[
-  \bar G_t(x)\asymp u^{5/2}e^{-d_X^2/(4u)},\quad
+  \bar G_t(x)\asymp u^{3/2}e^{-d_X^2/(4u)},\quad
   \int_{m_t}^{x}\frac{A_t}{g_t}
-  \asymp u^{-3/2}e^{d_X^2/(4u)},
+  \asymp u^{-1/2}e^{d_X^2/(4u)},
   \]
   因而右端乘积为 \(O(u)\)。
 
