@@ -3,19 +3,19 @@
   "branch": "research/two-parameter-spectral-bridge-2026-11-27",
   "artifact": {
     "path": "research/ROBIN_CURVATURE_SIGN_EXTENSION.md",
-    "sha256": "b2d9f763c14cf982af5205feb2672cdf527a4493fa07c4d7938645da0b9fac87"
+    "sha256": "bdbd38ce58c7ca75dfc7a9c39e741d05ac98c1880c963d16a14fe1936f1bcd9e"
   },
   "source": {
     "path": "research/robin_q50_taylor_box_300.py",
-    "sha256": "0e32892fdea2f2fd3d4ed648030b113e57fbb25e9e313ae2d59b9f87d1427078"
+    "sha256": "f6462fa6dfb49eb21c259a8cc15d7d9fdfff077b599f53a2aa00320d3eb5ab8e"
   },
   "input": {
     "path": "research/robin_q50_taylor_box_300_input.json",
-    "sha256": "d1815bce8c5b66d1e576d532fe8ac31fae1cd4e0a5e1adf670b2b9d3dc7e4e55"
+    "sha256": "45a74d8008ab8d794276b486124f924f1a1611bd4cb99222e9590b9ea0bb87e9"
   },
   "native_output": {
     "path": "research/robin_q50_taylor_box_300_output.txt",
-    "sha256": "a01cf833953e04f357f329ed3847ce1e4f74577894ad959ab10cfd7397d461d9"
+    "sha256": "c9e170cecf0d3cd16b1ac48f906949b54ac7c89e681dced95e6c32359a553667"
   },
   "dependencies": [
     {
