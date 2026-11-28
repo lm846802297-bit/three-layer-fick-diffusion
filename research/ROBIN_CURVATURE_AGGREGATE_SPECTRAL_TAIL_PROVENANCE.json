@@ -1,0 +1,38 @@
+{
+  "repository": "lm846802297-bit/three-layer-fick-diffusion",
+  "branch": "research/two-parameter-spectral-bridge-2026-11-27",
+  "artifact": {
+    "path": "research/ROBIN_CURVATURE_AGGREGATE_SPECTRAL_TAIL.md",
+    "sha256": "28abbeb6f1d51921f3a7afb805c1003edd4a09b8f1112a2ce10a525fb6bc2d3b"
+  },
+  "inputs": [
+    {
+      "path": "research/ROBIN_SCORE_CURVATURE_SINGLE_MINIMUM.md",
+      "sha256": "544d137d148991f6373671b85fe8ccbb7964615fc931d616fbdc1b770de9ed45"
+    },
+    {
+      "path": "research/curvature_compensation_obstruction_input.json",
+      "sha256": "239158a951724317fb50b60d82822cfdc9a1db0a67bc9cf2f843b987948f2db3"
+    },
+    {
+      "path": "research/curvature_compensation_obstruction_output.txt",
+      "sha256": "74d333499d47736ac00a8ad2c5f63d223217fd8240981edf3278a57d6141868b"
+    },
+    {
+      "path": "research/ZC_DENSITY_CURVATURE.md",
+      "sha256": "fd40db8509e499ccfeb312b7870958ae1e2d3be3c488479baea688f248acc0d8"
+    }
+  ],
+  "method": "Analytic transfer-matrix bounds for the uniform right Robin half-spectrum; residue formula from normalized half-spectrum characteristic functions; absolute aggregation of the double-residue series; inverse-Laplace saddle expansion of the exact hyperbolic transfer-matrix ratio.",
+  "computation": "No new certified eigenvalue computation or numerical scan was used. The low-mode ordering is inherited from the previously archived interval certificate. The coefficient and tail bounds are analytic.",
+  "assumptions": [
+    "Static-tie benchmark with common first half-spectrum eigenvalue c",
+    "Uniform right half with length 1/2, diffusivity 1, Robin parameter kappa>0",
+    "Simple half-spectrum roots and the established residue expansion"
+  ],
+  "open_items": [
+    "Choose an explicit small-time cutoff with a fully quantified differentiated saddle remainder",
+    "Certify the unique zero of a finite Q_N on the middle interval",
+    "Select explicit N and verify the C1 tail bounds with sufficient margin"
+  ]
+}
